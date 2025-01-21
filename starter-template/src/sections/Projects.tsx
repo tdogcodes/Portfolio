@@ -1,6 +1,10 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
+import CheckCircleIcon from "@/assets/icons/check-circle.svg";
+import grainImage from "@/assets/images/grain.jpg";
+import Image from "next/image";
 
 const portfolioProjects = [
   {
@@ -42,5 +46,46 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <div>Projects Section</div>;
+  return <section className="pb-16">
+    <div className="container">
+     <div className="flex justify-center">
+      <p className="font-semibold text-3xl md:text-5xl text-center uppercase tracking-widest 
+      bg-gradient-to-r from-emerald-200 to-sky-400 text-transparent bg-clip-text">Real World Results</p>
+     </div>
+      <h2 className="font-serif text-3xl md:text-4xl text-center mt-6">Featured Projects</h2>
+      <p className="mt-4 text-center text-white/60 md:text-2xl">See how I transformed my ideas into real world applications</p>
+      <div className="flex flex-col gap-5">
+        {portfolioProjects.map(project => (
+          <div key={project.title} className="z-0 overflow-hidden after:z-10 mt-10
+           bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 
+           after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 after:pointer-events-none"> 
+                <div className="absolute inset-0 opacity-5 -z-10" style={{ backgroundImage: `url(${grainImage.src})`}}></div> 
+                <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex 
+                gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text p-2 mt-4">
+                  <span>{project.company}</span>
+                  <span>&bull;</span>
+                  <span>{project.year}</span>
+              </div>   
+            <h3 className="font-serif text-2xl mt-2">{project.title}</h3>
+            <hr className="border-t-2 border-white/10 mt-4"/>
+            <ul className=" flex flex-col gap-4 mt-4">
+              {project.results.map(result => (
+                <li className="flex gap-2 text-sm text-white/50">
+                  <CheckCircleIcon className="size-5"/>
+                  <span className="">{result.title}</span>
+                </li>
+                ))}
+            </ul>
+            <a href={project.link}>
+              <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                <span className="">Visit live site</span>
+                <ArrowUpRight className="size-4"/>
+              </button>
+            </a>
+            <Image src={project.image} alt={project.title} className="mt-8 -mb-4" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>;
 };
