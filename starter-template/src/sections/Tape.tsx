@@ -1,7 +1,7 @@
 import StarIcon from "@/assets/icons/star.svg";
 const words= ["performant","accessible", "scaleable", "user friendly",
 "interactive", "responsive", "search optimized","reuseable", "maintainable",
- "secure", "best practices","modern frameworks"]
+ "secure", "best practices","modern tools"]
 
 export const TapeSection = () => {
   return (
