@@ -68,7 +68,7 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className="max-w-lg mx-auto">
-        <h1 className="font-serif text-3xl md:text-5xl text-center mt-6 tracking-wide">Building Exceptional Web Experiences</h1>
+        <h1 className="font-serif text-3xl md:text-5xl text-center mt-6 tracking-wide">Tracy Sandoval</h1>
         <p className="mt-4 text-center text-white/60 md:text-lg">
           I specialize in creating web apps using React, Next.js, Tailwind, and Typescript
         </p>
