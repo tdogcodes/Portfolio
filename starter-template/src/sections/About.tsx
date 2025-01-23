@@ -68,7 +68,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-  <div className="py-20">
+  <div className="py-20 -mb-20">
     <div className="container">
     <SectionHeader title="A Glimpse Into My World" eyebrow="learn a little bit about myself" description="Some fun facts about me"/>
     <div className="mt-20 flex flex-col gap-8">
@@ -98,7 +98,7 @@ export const AboutSection = () => {
           <div>
             <div>
               {hobbies.map(hobby => (
-                  <div key={hobby.title} className="inline-flex gap-2 px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5">
+                  <div key={hobby.title} className="inline-flex mx-.5  gap-2 px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5">
                     <span className="font-medium text-gray-950">{hobby.title}</span>
                     <span>{hobby.emoji}</span>
                   </div>
@@ -114,6 +114,7 @@ export const AboutSection = () => {
             </div>
       </Card>
       </div>
+      <hr className="border-t-2 border-white/10 mt-14 mx-3"/>
     </div>
   </div>)
 };
