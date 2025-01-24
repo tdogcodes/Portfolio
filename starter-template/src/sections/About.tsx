@@ -9,14 +9,19 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GitIcon from "@/assets/icons/git.svg";
 import TypescriptIcon from "@/assets/icons/typescript.svg";
+import NextjsIcon from "@/assets/icons/next.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
+import me from "@/assets/images/me.webp";
 import { CardHeader } from "@/components/CardHeader";
 
 const toolboxItems = [{
   title: "Javascript",
   iconType: JavascriptIcon,
+},
+{
+  title: "Typescript",
+  iconType: TypescriptIcon,
 },
 {
   title: "HTML5",
@@ -35,26 +40,22 @@ const toolboxItems = [{
   iconType: ReactIcon,
 },
 {
-  title: "Tailwind",
-  iconType: TailwindIcon,
+  title: "Next.js",
+  iconType: NextjsIcon,
 },
 {
-  title: "Typescript",
-  iconType: TypescriptIcon,
+  title: "Tailwind",
+  iconType: TailwindIcon,
 },
 ];
 
 const hobbies = [
   {
-    title: "Scupting",
+    title: "Sculpting",
     emoji: "🏺",
   },
   {
-    title: "Fencing",
-    emoji: "🤺",
-  },
-  {
-    title: "Playing with my cat",
+    title: "Hanging out my cat",
     emoji: "🐈",
   },
   {
@@ -79,7 +80,7 @@ export const AboutSection = () => {
     <div className="mt-20 flex flex-col gap-8">
       <div className="md:grid md:grid-cols-5 md:gap-8"> 
           <Card className=" md:col-span-2 sm:mb-8 md:mb-0">
-          <CardHeader title="My Reads" description="See the books the shape my perspective"/>
+          <CardHeader title="My Reads" description="Some of the latest books I've read"/>
               <div className="w-40 mx-auto mt-8"><Image src={bookImage} alt="Book Cover" width={300} height={300}/></div>  
           </Card>
         <Card className="md:col-span-3 ">
@@ -99,7 +100,7 @@ export const AboutSection = () => {
         </Card>
       </div>
       <Card className="gap-4">
-          <CardHeader title="My Hobbies" description="things I like besides development"/>
+          <CardHeader title="My Hobbies" description="things I like besides web development"/>
           <div>
             <div>
               {hobbies.map(hobby => (
@@ -112,10 +113,10 @@ export const AboutSection = () => {
             </div>
           </div>      
       </Card>
-      <Card className="h-[320px] p-0 relative">       
+      <Card className="h-[320px] p-0 relative ">       
             <Image src={mapImage} alt="Map" className="w-full h-full object-cover"/>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400">
-              <Image src={smileMemoji} alt="Smile Memoji" className="size-20"/>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center size-24 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400">
+              <Image src={me} alt="Me" className="size-20 rounded-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
             </div>
       </Card>
       </div>
