@@ -2,12 +2,13 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
+import JavascriptIcon from "@/assets/icons/javascript.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
 import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
+import GitIcon from "@/assets/icons/git.svg";
+import TypescriptIcon from "@/assets/icons/typescript.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -26,16 +27,20 @@ const toolboxItems = [{
   iconType: CssIcon,
 },
 {
+  title: "Git",
+  iconType: GitIcon,
+},
+{
   title: "React",
   iconType: ReactIcon,
 },
 {
-  title: "Github",
-  iconType: GithubIcon,
+  title: "Tailwind",
+  iconType: TailwindIcon,
 },
 {
-  title: "Chrome",
-  iconType: ChromeIcon,
+  title: "Typescript",
+  iconType: TypescriptIcon,
 },
 ];
 
@@ -68,16 +73,16 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-  <div className="py-20 -mb-20">
+  <div id="about" className="py-20 -mb-20">
     <div className="container">
     <SectionHeader title="A Glimpse Into My World" eyebrow="learn a little bit about myself" description="Some fun facts about me"/>
     <div className="mt-20 flex flex-col gap-8">
       <div className="md:grid md:grid-cols-5 md:gap-8"> 
-          <Card className="h-[320px] md:col-span-2 sm:mb-8 md:mb-0">
+          <Card className=" md:col-span-2 sm:mb-8 md:mb-0">
           <CardHeader title="My Reads" description="See the books the shape my perspective"/>
               <div className="w-40 mx-auto mt-8"><Image src={bookImage} alt="Book Cover" width={300} height={300}/></div>  
           </Card>
-        <Card className="h-[320px] md:col-span-3 ">
+        <Card className="md:col-span-3 ">
           <CardHeader title="My Toolbox" description="The tools I use to build web applications"/>
           <div className="mt-5 flex flex-col items-center">
             <div className="">

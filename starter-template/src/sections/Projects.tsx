@@ -1,6 +1,6 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import PortfolioPage from "@/assets/images/portfolio.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -33,21 +33,21 @@ const portfolioProjects = [
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Tracy's Portfolio Page",
+    year: "2025",
+    title: "This Portfolio",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Lazy Loading, SSR & Image Optimization with Next.js" },
+      { title: "Styled using Tailwind CSS" },
+      { title: "Created type safe components with Typescript" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "#",
+    image: PortfolioPage,
   },
 ];
 
 export const ProjectsSection = () => {
-  return <section className="pb-16 lg:py-24 ">
+  return <section id="projects" className="pb-16 lg:py-24 pt-16">
     <div className="container">
      <SectionHeader title="Real World Projects" eyebrow="I turn ideas into real world solutions" description="Here's what I've been working on"/>
       <div className="flex flex-col gap-5">
@@ -79,7 +79,7 @@ export const ProjectsSection = () => {
                 <ArrowUpRight className="size-4"/>
               </button>
             </a>
-            <Image src={project.image} alt={project.title} className="mt-8 -mb-4 lg:mt-4 lg:mx-auto lg:max-w-[90%] w-auto h-auto object-contain" />
+            <Image src={project.image} alt={project.title} className="mt-8 -mb-4 lg:mt-4 lg:mx-auto lg:max-w-[90%] w-auto h-auto object-contain border border-white/20 rounded-3xl" />
           </div>
         ))}
       </div>
