@@ -1,6 +1,7 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import PortfolioPage from "@/assets/images/portfolio.png";
+import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -21,16 +22,16 @@ const portfolioProjects = [
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Akasha Terminal",
+    year: "2024",
+    title: "Realtime Chat App for Genshin Impact",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "React, Javascript & CSS frontend" },
+      { title: "Integrated Firebase Database, Firestore, and Firebase Authentication APIs" },
+      { title: "Global state management for user data using Zustand" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    image: AkashaPage,
   },
   {
     company: "Tracy's Portfolio Page",
@@ -38,7 +39,7 @@ const portfolioProjects = [
     title: "This Portfolio",
     results: [
       { title: "Lazy Loading, SSR & Image Optimization with Next.js" },
-      { title: "Styled using Tailwind CSS" },
+      { title: "Styled components & animations using Tailwind CSS" },
       { title: "Created type safe components with Typescript" },
     ],
     link: "#",
