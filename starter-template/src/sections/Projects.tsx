@@ -1,5 +1,4 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import Game from "@/assets/images/2048.png";
 import PortfolioPage from "@/assets/images/portfolio.png";
 import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
@@ -10,25 +9,25 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Tdog's 2048",
+    year: "2024",
+    title: "2048 Tile Merging Game",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "HTML structured UI" },
+      { title: "CSS styling & smooth tile merging animations" },
+      { title: "Javascript components for tiles, game board, and user controls" },
     ],
     link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    image: Game,
   },
   {
     company: "Akasha Terminal",
     year: "2024",
     title: "Realtime Chat App for Genshin Impact",
     results: [
-      { title: "React, Javascript & CSS frontend" },
+      { title: "React & CSS implemented frontend" },
       { title: "Integrated Firebase Database, Firestore, and Firebase Authentication APIs" },
-      { title: "Global state management for user data using Zustand" },
+      { title: "Zustand for managing user data as global state" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
     image: AkashaPage,
