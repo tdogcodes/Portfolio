@@ -13,11 +13,11 @@ const portfolioProjects = [
     year: "2024",
     title: "2048 Tile Merging Game",
     results: [
-      { title: "HTML structured UI" },
-      { title: "CSS styling & smooth tile merging animations" },
-      { title: "Javascript components for tiles, game board, and user controls" },
+      { title: "Made with HTML, CSS, and Javascript" },
+      { title: "A game I've been playing on my phone, brought to the browser" },
+      { title: "Merge tiles together that increase by the power of 2 and try not to get stuck" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://tdog2048.netlify.app",
     image: Game,
   },
   {
@@ -25,7 +25,7 @@ const portfolioProjects = [
     year: "2024",
     title: "Realtime Chat App for Genshin Impact",
     results: [
-      { title: "React & CSS implemented frontend" },
+      { title: "React & CSS frontend" },
       { title: "Integrated Firebase Database, Firestore, and Firebase Authentication APIs" },
       { title: "Zustand for managing user data as global state" },
     ],
@@ -53,7 +53,7 @@ export const ProjectsSection = () => {
       <div className="flex flex-col gap-5">
         {portfolioProjects.map(project => (
           <div key={project.title} className="z-0 overflow-hidden after:z-10 mt-12 flex flex-col align-center
-           bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 
+           bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2
            after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 md:pt-12 md:px-10 px-8 after:pointer-events-none"> 
                 <div className="absolute inset-0 opacity-5 -z-10" style={{ backgroundImage: `url(${grainImage.src})`}}></div> 
                 <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex 

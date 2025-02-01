@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import bookImage from "@/assets/images/book-cover.png";
+import wguLogo from "@/assets/images/wguLogo.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/javascript.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
@@ -55,20 +55,20 @@ const hobbies = [
     emoji: "🏺",
   },
   {
-    title: "Hanging out my cat",
+    title: "Petting my cat",
     emoji: "🐈",
   },
   {
-    title: "Gaming",
-    emoji: "🖥️",
+    title: "Genshin Impact",
+    emoji: "✨",
   },
   {
     title: "Anime",
-    emoji: "📺",
+    emoji: "😎",
   },
   {
-    title: "Reading",
-    emoji: "📘",
+    title: "Learning new tech",
+    emoji: "🤖",
   },
 ];
 
@@ -80,8 +80,8 @@ export const AboutSection = () => {
     <div className="mt-20 flex flex-col gap-8">
       <div className="md:grid md:grid-cols-5 md:gap-8"> 
           <Card className=" md:col-span-2 sm:mb-8 md:mb-0">
-          <CardHeader title="My Reads" description="Some of the latest books I've read"/>
-              <div className="w-40 mx-auto mt-8"><Image src={bookImage} alt="Book Cover" width={300} height={300}/></div>  
+          <CardHeader title="My School" description="Bachelor of Science in Computer Science"/>
+              <div className="w-40 mx-auto mt-8"><Image src={wguLogo} alt="Book Cover" width={300} height={300}/></div>  
           </Card>
         <Card className="md:col-span-3 ">
           <CardHeader title="My Toolbox" description="The tools I use to build web applications"/>
