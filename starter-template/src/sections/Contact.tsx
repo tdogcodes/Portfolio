@@ -1,7 +1,23 @@
+'use client'
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import CopyPaste from "@/assets/icons/copyPaste.svg"
+import { useState } from "react";
 
 export const ContactSection = () => {
+  const [copied, setCopied] = useState(false);
+  const textToCopy = "trxcycsgo@gmail.com";
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
   return (
   <div id="contact" className="py-16 pt-14">
     <div className="container">
@@ -12,13 +28,24 @@ export const ContactSection = () => {
         </div>
         <h2 className="font-serif text-2xl">Lets get in touch</h2>
         <p className="text-sm mt-2">Ready to bring your next project to life? Let's make it happen!</p>
-        <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 mt-5
-         hover:bg-white hover:text-gray-900 transition duration-500 border border-white/15">
-          <span className="font-semibold ">
-            Contact Me
-          </span>
-          <ArrowUpRight className="size-4"/>
-          </button>
+        <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col">
+            <div onClick={handleCopy} className="bg-gray-800 hover:opacity-90 transition text-white inline-flex items-center justify-center px-6 h-12
+             cursor-pointer rounded-xl gap-2 mt-5">
+                <span className="font-semibold">{textToCopy}</span>
+              <CopyPaste className="size-4" fill="white"/>
+            </div>
+          </div>
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+            <button className="text-white bg-gray-900 flex items-center px-6 h-12 rounded-xl gap-2 mt-5
+             hover:bg-white hover:text-gray-900 transition duration-500 border border-white/15">
+              <span className="font-semibold">
+                Open Gmail
+              </span>
+              <ArrowUpRight className="size-4"/>
+              </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>

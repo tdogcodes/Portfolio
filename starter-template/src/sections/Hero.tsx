@@ -70,7 +70,7 @@ export const HeroSection = () => {
       <div className="max-w-lg mx-auto">
         <h1 className="font-serif text-3xl md:text-5xl text-center mt-6 tracking-wide">Tracy Sandoval</h1>
         <p className="mt-4 text-center text-white/60 md:text-lg">
-          I'm a Web Developer from Hemet, CA. <br/> Specializing in responsive React applications.
+          I'm a Frontend Developer from Hemet, CA. <br/> Specializing in responsive React applications.
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">

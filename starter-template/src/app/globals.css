@@ -21,3 +21,15 @@
         scroll-behavior: smooth;
       }
 }
+
+body{
+    background-color:#bd99ff;
+        background-image:
+        radial-gradient(at 81% 74%, hsla(222,92%,72%,0.1) 0px, transparent 90%),
+        radial-gradient(at 81% 35%, hsla(228,98%,64%,0.1) 0px, transparent 90%),
+        radial-gradient(at 34% 92%, hsla(151,92%,79%,0.1) 0px, transparent 90%),
+        radial-gradient(at 9% 32%, hsla(245,76%,62%,0.1) 0px, transparent 90%),
+        radial-gradient(at 82% 44%, hsla(174,85%,75%,0.1) 0px, transparent 90%),
+        radial-gradient(at 74% 19%, hsla(189,97%,76%,0.1) 0px, transparent 90%),
+        radial-gradient(at 95% 65%, hsla(189,72%,73%,0.1) 0px, transparent 90%);
+}
