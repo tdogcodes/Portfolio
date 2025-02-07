@@ -72,9 +72,10 @@ export const ProjectsSection = () => {
                 </li>
                 ))}
             </ul>
-            <a href={project.link} className="block mx-auto w-full md:w-auto sm:w-auto ">
-              <button className="bg-blue-900 text-white h-12 md:w-auto rounded-xl lg:mt-3
-                hover:bg-white border border-white/15 hover:text-black transition duration-500 z-20 md:px-4 font-semibold inline-flex items-center px-3 justify-around gap-2m-auto mt-8">
+            <a href={project.link} className="block mx-auto w-full md:w-auto sm:w-auto "
+            target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
+              <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
+                z-20 md:px-4 font-semibold inline-flex items-center px-3 justify-around gap-2m-auto mt-8">
                 <span className="">Visit live site</span>
                 <ArrowUpRight className="size-4"/>
               </button>

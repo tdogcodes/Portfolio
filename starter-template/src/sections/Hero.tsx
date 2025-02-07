@@ -74,12 +74,11 @@ export const HeroSection = () => {
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-        <button className="inline-flex items-center gap-2 border border-white/15 bg-blue-900 px-6 h-12 rounded-xl z-10 hover:bg-white hover:text-black transition duration-500">
-          <span className="font-semibold">
-            View Projects</span>
+        <button className="inline-flex items-center gap-2 pretty-btn h-12 z-10">
+          <span>View Projects</span>
           <ArrowDown className="size-4"/>
         </button>
-        <button className="inline-flex items-center gap-2 border border-white/15 bg-teal-900 text-white px-6 h-12 rounded-xl z-10 hover:bg-white hover:text-black transition duration-500">
+        <button className="inline-flex items-center gap-2 pretty-btn h-12 z-10">
           <span>🤝</span>
           <span className="font-semibold">Lets Connect</span>
         </button>

@@ -81,7 +81,7 @@ export const AboutSection = () => {
   return (
   <div id="about" className="py-20 -mb-20">
     <div className="container">
-    <SectionHeader title="A Glimpse Into My World" eyebrow="learn a bit about myself" description=""/>
+    <SectionHeader title="A Glimpse Into My World" eyebrow="learn what shaped my perspective" description=""/>
     <div className="mt-20 flex flex-col gap-8">
       <div className="md:grid md:grid-cols-5 md:gap-8"> 
           <Card className=" md:col-span-2 sm:mb-8 md:mb-0">
