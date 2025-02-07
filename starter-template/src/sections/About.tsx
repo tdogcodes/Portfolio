@@ -10,6 +10,7 @@ import ReactIcon from "@/assets/icons/react.svg";
 import GitIcon from "@/assets/icons/git.svg";
 import TypescriptIcon from "@/assets/icons/typescript.svg";
 import NextjsIcon from "@/assets/icons/next.svg";
+import FramerMotion from '@/assets/icons/framerMotion.svg'
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import me from "@/assets/images/me.webp";
@@ -47,6 +48,10 @@ const toolboxItems = [{
   title: "Tailwind",
   iconType: TailwindIcon,
 },
+{
+  title: "Framer Motion",
+  iconType: FramerMotion,
+}
 ];
 
 const hobbies = [
@@ -118,6 +123,7 @@ export const AboutSection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center size-24 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400">
               <Image src={me} alt="Me" className="size-20 rounded-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
             </div>
+            <span className="text-black bottom-20 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-semibold absolute ">Hemet, CA</span>
       </Card>
       </div>
       <hr className="border-t-2 border-white/10 mt-14 mx-3"/>

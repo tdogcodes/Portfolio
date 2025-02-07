@@ -1,5 +1,5 @@
 import Game from "@/assets/images/2048.png";
-import PortfolioPage from "@/assets/images/portfolio.png";
+import LayersLanding from "@/assets/images/layersPic.png";
 import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -33,16 +33,16 @@ const portfolioProjects = [
     image: AkashaPage,
   },
   {
-    company: "Tracy's Portfolio Page",
+    company: "Layers.to",
     year: "2025",
-    title: "This Portfolio",
+    title: "Landing Page for Frontend Development platform",
     results: [
-      { title: "Lazy Loading, SSR & Image Optimization with Next.js" },
-      { title: "Styled components & animations using Tailwind CSS" },
-      { title: "Created type safe components with Typescript" },
+      { title: "Used Next.js to break code into client & server side React components" },
+      { title: "Styled components & animations using Tailwind CSS & Framer Motion" },
+      { title: "Created type safe components & functions using Typescript" },
     ],
     link: "#",
-    image: PortfolioPage,
+    image: LayersLanding,
   },
 ];
 
