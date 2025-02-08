@@ -28,16 +28,16 @@ export const ContactSection = () => {
         </div>
         <h2 className="font-serif text-2xl">Lets get in touch</h2>
         <p className="text-sm mt-2">Ready to bring your next project to life? Let's make it happen!</p>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
           <div className="flex flex-col">
-            <div onClick={handleCopy} className="pretty-btn bg-gray-900 flex items-center px-6 h-12 rounded-xl gap-2 mt-5">
-              <span className="font-semibold">{textToCopy}</span>
+            <div onClick={handleCopy} className="pretty-btn bg-gray-900 flex items-center px-6 h-12 rounded-xl gap-2">
+              <span className="font-semibold">{copied ? "Copied! :D" : textToCopy}</span>
               <CopyPaste className="size-4" fill="white"/>
             </div>
           </div>
           <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
-            <button className="pretty-btn bg-gray-900 flex items-center px-6 h-12 rounded-xl gap-2 mt-5
-             hover:bg-white hover:text-gray-900 transition duration-500 border border-white/15">
+            <button className="pretty-btn flex items-center px-6 h-12 rounded-xl gap-2
+             transition duration-500 border">
               <span className="font-semibold">
                 Open Gmail
               </span>
