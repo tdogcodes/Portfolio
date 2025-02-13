@@ -56,8 +56,8 @@ const toolboxItems = [{
 
 const hobbies = [
   {
-    title: "Sculpting",
-    emoji: "🏺",
+    title: "Reading",
+    emoji: "📚",
   },
   {
     title: "Petting my cat",

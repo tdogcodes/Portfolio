@@ -9,12 +9,12 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
-    company: "Tdog's 2048",
+    company: "2048 Game",
     year: "2024",
     title: "2048 Tile Merging Game",
     results: [
-      { title: "Made with HTML, CSS, and Javascript" },
-      { title: "A game I've been playing on my phone, brought to the browser" },
+      { title: "Created only using HTML, CSS, and Javascript" },
+      { title: "A game I like to play on my phone, brought to the browser" },
       { title: "Merge tiles together that increase by the power of 2 and try not to get stuck" },
     ],
     link: "https://tdog2048.netlify.app",
@@ -25,8 +25,8 @@ const portfolioProjects = [
     year: "2024",
     title: "Realtime Chat App for Genshin Impact",
     results: [
-      { title: "React & CSS frontend" },
-      { title: "Integrated Firebase Database, Firestore, and Firebase Authentication APIs" },
+      { title: "Created reuseable components using React, Javascript and CSS" },
+      { title: "Performed CRUD operations using Firebase Database, Firestore, and Firebase Authentication APIs" },
       { title: "Zustand for managing user data as global state" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
@@ -37,9 +37,9 @@ const portfolioProjects = [
     year: "2025",
     title: "Landing Page for Frontend Development platform",
     results: [
-      { title: "Used Next.js to break code into client & server side React components" },
-      { title: "Styled components & animations using Tailwind CSS & Framer Motion" },
-      { title: "Created type safe components & functions using Typescript" },
+      { title: "Made with Next.js, used semantic HTML & image optimization " },
+      { title: "Styled responsive UI & animations using Tailwind CSS & Framer Motion" },
+      { title: "Created type safe components & functions with Typescript" },
     ],
     link: "#",
     image: LayersLanding,
