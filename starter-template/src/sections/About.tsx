@@ -81,12 +81,12 @@ export const AboutSection = () => {
   return (
   <div id="about" className="py-20 -mb-20">
     <div className="container">
-    <SectionHeader title="A Glimpse Into My World" eyebrow="learn what shaped my perspective" description=""/>
+    <SectionHeader title="A Glimpse Into My World" eyebrow="learn more about me" description=""/>
     <div className="mt-20 flex flex-col gap-8">
       <div className="md:grid md:grid-cols-5 md:gap-8"> 
           <Card className=" md:col-span-2 sm:mb-8 md:mb-0">
           <CardHeader title="My School" description="Bachelor of Science in Computer Science"/>
-              <div className="w-40 mx-auto mt-8"><Image src={wguLogo} alt="Book Cover" width={300} height={300}/></div>  
+              <div className="w-40 mx-auto mt-8"><Image src={wguLogo} alt="Book Cover" className="duration-300 rounded-full transition-shadow hover:hover:shadow-[5px_5px_rgba(0,98,90,0.4),10px_10px_rgba(0,98,90,0.3),15px_15px_rgba(0,98,90,0.2),20px_20px_rgba(0,98,90,0.1),25px_25px_rgba(0,98,90,0.05)]" width={300} height={300}/></div>  
           </Card>
         <Card className="md:col-span-3 ">
           <CardHeader title="My Toolbox" description="The tools I use to build web applications"/>
@@ -94,7 +94,7 @@ export const AboutSection = () => {
             <div className="">
               {toolboxItems.map(item => {
                 return (
-                  <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg m-1 -translate-x">
+                  <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 hover:outline-emerald-300 hover:scale-95 transition-all duration-300 outline outline-2 outline-white/10 rounded-lg m-1 -translate-x">
                     <TechIcon component={item.iconType}/>
                     <span className="font-semibold">{item.title}</span>
                   </div>
@@ -109,7 +109,7 @@ export const AboutSection = () => {
           <div>
             <div>
               {hobbies.map(hobby => (
-                  <div key={hobby.title} className="inline-flex mx-.5  gap-2 px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5">
+                  <div key={hobby.title} className="inline-flex mx-.5 hover:animate-pulse hover:rotate-12 transition-all duration-700 gap-2 px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5">
                     <span className="font-medium text-gray-950">{hobby.title}</span>
                     <span>{hobby.emoji}</span>
                   </div>

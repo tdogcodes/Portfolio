@@ -1,4 +1,4 @@
-import Game from "@/assets/images/2048.png";
+import Prescripto from "@/assets/images/prescriptoPic.png";
 import LayersLanding from "@/assets/images/layersPic.png";
 import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
@@ -9,28 +9,16 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
-    company: "2048 Game",
-    year: "2024",
-    title: "2048 Tile Merging Game",
+    company: "Prescripto",
+    year: "2025",
+    title: "Healthcare Platform for Doctors and Patients",
     results: [
-      { title: "Created only using HTML, CSS, and Javascript" },
-      { title: "A game I like to play on my phone, brought to the browser" },
-      { title: "Merge tiles together that increase by the power of 2 and try not to get stuck" },
+      { title: "Made with React, Tailwind, & React Router" },
+      { title: "Implemented appointment scheduling software in Javascript" },
+      { title: "Used Figma design to ensure site is pixel perfect" },
     ],
     link: "https://tdog2048.netlify.app",
-    image: Game,
-  },
-  {
-    company: "Akasha Terminal",
-    year: "2024",
-    title: "Realtime Chat App for Genshin Impact",
-    results: [
-      { title: "Created reuseable components using React, Javascript and CSS" },
-      { title: "Performed CRUD operations using Firebase Database, Firestore, and Firebase Authentication APIs" },
-      { title: "Zustand for managing user data as global state" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: AkashaPage,
+    image: Prescripto,
   },
   {
     company: "Layers.to",
@@ -43,6 +31,18 @@ const portfolioProjects = [
     ],
     link: "#",
     image: LayersLanding,
+  },
+  {
+    company: "Akasha Terminal",
+    year: "2024",
+    title: "Realtime Chat App for Genshin Impact",
+    results: [
+      { title: "Created reuseable components using React, Javascript and CSS" },
+      { title: "Performed CRUD operations using Firebase Database, Firestore, and Firebase Authentication APIs" },
+      { title: "Zustand for managing user data as global state" },
+    ],
+    link: "https://youtu.be/7hi5zwO75yc",
+    image: AkashaPage,
   },
 ];
 
