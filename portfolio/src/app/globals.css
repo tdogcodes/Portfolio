@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .nav-item {
+        @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
+    }
+    .hero-ring{
+        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5
+    }
+
+}
+
+@layer utilities{
+    .container{
+        @apply lg:max-w-5xl
+    }
+    
+    html {
+        scroll-behavior: smooth;
+      }
+}
+
+body{
+    background-color:#bd99ff;
+        background-image:
+        radial-gradient(at 81% 74%, hsla(222,92%,72%,0.1) 0px, transparent 90%),
+        radial-gradient(at 81% 35%, hsla(228,98%,64%,0.1) 0px, transparent 90%),
+        radial-gradient(at 34% 92%, hsla(151,92%,79%,0.1) 0px, transparent 90%),
+        radial-gradient(at 9% 32%, hsla(245,76%,62%,0.1) 0px, transparent 90%),
+        radial-gradient(at 82% 44%, hsla(174,85%,75%,0.1) 0px, transparent 90%),
+        radial-gradient(at 74% 19%, hsla(189,97%,76%,0.1) 0px, transparent 90%),
+        radial-gradient(at 95% 65%, hsla(189,72%,73%,0.1) 0px, transparent 90%);
+}
+
+.pretty-btn {
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 30px #1f4c65;
+  }
+  
+  .pretty-btn:active {
+    scale: 0.92;
+  }
+  
+  .pretty-btn:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.6) 60%);
+    color: rgb(4, 4, 38);
+    box-shadow: 0px 0px 60px #41a7dd;
+  }
+
+  
