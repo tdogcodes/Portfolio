@@ -10,7 +10,7 @@ import ReactIcon from "@/assets/icons/react.svg";
 import GitIcon from "@/assets/icons/git.svg";
 import TypescriptIcon from "@/assets/icons/typescript.svg";
 import NextjsIcon from "@/assets/icons/next.svg";
-import FramerMotion from '@/assets/icons/framerMotion.svg'
+import Zustand from '@/assets/icons/zustand.svg'
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import me from "@/assets/images/me.webp";
@@ -49,8 +49,8 @@ const toolboxItems = [{
   iconType: TailwindIcon,
 },
 {
-  title: "Framer Motion",
-  iconType: FramerMotion,
+  title: "Zustand",
+  iconType: Zustand,
 }
 ];
 
