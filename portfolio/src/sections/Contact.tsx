@@ -27,7 +27,7 @@ export const ContactSection = () => {
         }}>
         </div>
         <h2 className="font-serif text-2xl">Lets get in touch</h2>
-        <p className="text-sm mt-2">Ready to bring your next project to life? Let's make it happen!</p>
+        <p className="text-sm mt-2">Ready to bring your next project to life? Let&apos;s make it happen!</p>
         <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
           <div className="flex flex-col">
             <div onClick={handleCopy} className="pretty-btn bg-gray-900 flex items-center px-6 h-12 rounded-xl gap-2">
