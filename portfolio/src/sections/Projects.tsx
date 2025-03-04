@@ -61,7 +61,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return <section id="projects" className="pb-16 lg:py-24 pt-16">
-    <div className="flex flex-col sm:mx-24 md:mx-36 lg:mx-24">
+    <div className="flex flex-col sm:mx-10 md:mx-36 lg:mx-24">
      <SectionHeader title="Real World Projects" eyebrow="Here's what I've worked on" description=""/>
       <div className="flex flex-col lg:flex-row gap-5 lg:justify-center lg:flex-wrap overflow-hidden">
         {portfolioProjects.map(project => (
