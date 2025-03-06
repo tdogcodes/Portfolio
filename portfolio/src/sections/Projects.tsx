@@ -54,7 +54,7 @@ const portfolioProjects = [
       { title: "Uses the Article Extractor and Summarizer API from RapidAPI" },
       { title: "Give Sumz any link to get a concise summary of the content" },
     ],
-    link: "https://tdog2048.netlify.app",
+    link: "https://sumz-ai-git-main-tracys-projects-b4f84f1c.vercel.app",
     image: Sumz,
   },
 ];
