@@ -4,6 +4,7 @@ import Sumz from "@/assets/images/aisumz.png";
 import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
+import GithubIcon from "@/assets/icons/github.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -19,6 +20,7 @@ const portfolioProjects = [
       { title: "Used Figma design to create the specified UI" },
     ],
     link: "https://prescripto-healthcare.vercel.app",
+    code: "https://github.com/tdogcodes/Prescripto-Healthcare",
     image: Prescripto,
   },
   {
@@ -31,6 +33,7 @@ const portfolioProjects = [
       { title: "Created type safe components & functions with Typescript" },
     ],
     link: "https://layers-design.vercel.app",
+    code: "https://github.com/tdogcodes/Layers-Landing-Page",
     image: LayersLanding,
   },
   {
@@ -43,6 +46,7 @@ const portfolioProjects = [
       { title: "Zustand for managing user data as global state" },
     ],
     link: "https://akasha-terminal.vercel.app",
+    code: "https://github.com/tdogcodes/Genshin-Impact-Messenging",
     image: AkashaPage,
   },
   {
@@ -55,6 +59,7 @@ const portfolioProjects = [
       { title: "Give Sumz any link to get a concise summary of the content" },
     ],
     link: "https://sumz-ai-git-main-tracys-projects-b4f84f1c.vercel.app",
+    code: "https://github.com/tdogcodes/sumz-ai",
     image: Sumz,
   },
 ];
@@ -87,14 +92,24 @@ export const ProjectsSection = () => {
                 ))}
             </ul>
            <div className="flex flex-col">
-              <a href={project.link} className="block mx-auto w-full md:w-auto sm:w-auto "
-              target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
-                <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
-                  z-20 md:px-4 font-semibold inline-flex items-center px-3 justify-around gap-2m-auto mt-8">
-                  <span className="">Visit live site</span>
-                  <ArrowUpRight className="size-4"/>
-                </button>
-              </a>
+              <div className="flex flex-row justify-center gap-4">
+                <a href={project.link} className="w-full md:w-auto sm:w-auto "
+                target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
+                  <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
+                    z-20 md:px-4 font-semibold inline-flex items-center px-3 justify-around gap-2 m-auto mt-8">
+                    <span>Visit Site</span>
+                    <ArrowUpRight className="size-5"/>
+                  </button>
+                </a>
+                <a href={project.code} className="w-full md:w-auto sm:w-auto "
+                target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
+                  <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
+                    z-20 md:px-4 font-semibold inline-flex items-center px-3 justify-around gap-2 m-auto mt-8">
+                    <span>View Code</span>
+                    <GithubIcon className="size-5"/>
+                  </button>
+                </a>
+              </div>
               <Image src={project.image} alt={project.title} className="mt-8 -mb-4 lg:mt-4 lg:mx-auto lg:max-w-[90%] w-auto h-auto object-contain border border-white/20 rounded-3xl" />
            </div>
           </div>

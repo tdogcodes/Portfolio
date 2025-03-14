@@ -273,8 +273,10 @@ export const HeroSection = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 pretty-btn h-12 z-10">
-            <span>View Github</span>
-            <GithubIcon className="size-6" />
+            <a href="https://github.com/tdogcodes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+              <span>View Github</span>
+              <GithubIcon className="size-6" />
+            </a>
           </button>
           <button className="inline-flex items-center gap-2 pretty-btn h-12 z-10">
             <a
