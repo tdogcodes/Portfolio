@@ -1,6 +1,7 @@
+"use client";
 import Prescripto from "@/assets/images/prescriptoPic.png";
 import LayersLanding from "@/assets/images/layersPic.png";
-import Sumz from "@/assets/images/aisumz.png";
+import FormlyAI from "@/assets/images/formlyAI.png";
 import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -8,19 +9,21 @@ import GithubIcon from "@/assets/icons/github.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
+import { useInView, motion } from "framer-motion";
+import { useRef } from "react";
 
 const portfolioProjects = [
   {
-    company: "Prescripto",
+    company: "Formly",
     year: "2025",
-    title: "Healthcare Platform for Doctors and Patients",
+    title: "Fullstack AI Drag and Drop Form Builder",
     results: [
-      { title: "Developed a responsive React frontend for a healthcare platform,patients can to schedule and manage appointments" },
-      { title: "Implemented design from Figma, pagination with React Router, and styled with Tailwind, auth was implemented with Clerk" },
+      { title: "Create forms with drag and drop blocks, or write a prompt to create a form that you can share with a link, and track responses" },
+      { title: "Built with Next.js, Tailwind CSS, React DnD, Kinde, and Google Gemini API. The backend uses PostgreSQL, hosted on Neon." },
     ],
-    link: "https://prescripto-healthcare.vercel.app",
-    code: "https://github.com/tdogcodes/Prescripto-Healthcare",
-    image: Prescripto,
+    link: "https://formly-henna.vercel.app",
+    code: "https://github.com/tdogcodes/Formly",
+    image: FormlyAI,
   },
   {
     company: "Layers.to",
@@ -40,33 +43,39 @@ const portfolioProjects = [
     title: "Realtime Chat App for Genshin Impact",
     results: [
       { title: "Created a full-stack real-time chat app with React and Firebase, allowing users to log in, connect, and chat securely." },
-      { title: "State management with Zustand, and Firebase as a backend to store messenges, and styled with CSS3" },
+      { title: "Manages user data with Zustand and stores it in Firestore, uses Firebase Auth, and styled with CSS" },
     ],
     link: "https://akasha-terminal.vercel.app",
     code: "https://github.com/tdogcodes/Genshin-Impact-Messenging",
     image: AkashaPage,
   },
   {
-    company: "Sumz AI",
+    company: "Prescripto",
     year: "2025",
-    title: "GPT-4o Website URL Summarizer",
+    title: "Healthcare Platform for Doctors and Patients",
     results: [
-      { title: "A React AI article summarizer that extracts key insights from URLs and stores generated summaries in localStorage" },
-      { title: "Summaries generated with AI Article Summarizer REST API, styled with Tailwind, manages api repsonse as state with Redux" },
+      { title: "Developed a responsive React frontend for a healthcare platform,patients can schedule and manage appointments" },
+      { title: "Implemented the design from Figma, made with Vite and React Router, and styled with Tailwind." },
     ],
-    link: "https://sumz-ai-git-main-tracys-projects-b4f84f1c.vercel.app",
-    code: "https://github.com/tdogcodes/sumz-ai",
-    image: Sumz,
+    link: "https://prescripto-healthcare.vercel.app",
+    code: "https://github.com/tdogcodes/Prescripto-Healthcare",
+    image: Prescripto,
   },
 ];
 
 export const ProjectsSection = () => {
+
+const refs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+const inViews = refs.map(ref => useInView(ref, { once: true }));
+
+
   return <section id="projects" className="pb-16 lg:py-24 pt-16">
     <div className="flex flex-col sm:mx-10 md:mx-36 lg:mx-24">
-     <SectionHeader title="Real World Projects" eyebrow="Here's what I've worked on" description=""/>
+      <SectionHeader title="Real World Projects" eyebrow="Here's what I've worked on" description=""/>
       <div className="flex flex-col lg:flex-row gap-5 lg:justify-center lg:flex-wrap overflow-hidden">
-        {portfolioProjects.map(project => (
-          <div key={project.title} className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 flex flex-col align-center
+        {portfolioProjects.map((project, i) => (
+          <motion.div ref={refs[i]} initial={{ opacity: 0, y: 50 }} animate={inViews[i] ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1 }} key={project.title} className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 flex flex-col align-center
            bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2
            after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 md:pt-12 md:px-10
             px-8 after:pointer-events-none lg:pb-10"> 
@@ -108,7 +117,7 @@ export const ProjectsSection = () => {
               </div>
               <Image src={project.image} alt={project.title} className="mt-8 -mb-4 lg:mt-4 lg:mx-auto lg:max-w-[90%] w-auto h-auto object-contain border border-white/20 rounded-3xl" />
            </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

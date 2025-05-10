@@ -1,4 +1,3 @@
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
@@ -7,10 +6,11 @@ import GithubIcon from "@/assets/icons/github.svg";
 import PdfIcon from "@/assets/icons/pdf.svg";
 
 export const HeroSection = () => {
+
   return (
     <div
       id="home"
-      className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+      className="scroll-mt-20 py-32 my-16 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
     >
       <div
         className="absolute inset-0"
@@ -267,8 +267,8 @@ export const HeroSection = () => {
             Tracy Sandoval
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I&apos;m a Frontend Developer from Hemet, CA. <br /> Specializing in
-            responsive React applications.
+            I&apos;m a Web Developer from Hemet, CA. <br /> Primarily working with
+            React & Typescript.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
