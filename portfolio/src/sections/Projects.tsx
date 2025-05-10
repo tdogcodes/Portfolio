@@ -88,21 +88,21 @@ export const ProjectsSection = () => {
                 ))}
             </ul>
            <div className="flex flex-col">
-              <div className="flex flex-row max-sm:flex-col text-center justify-center md:gap-4">
-                <a href={project.link} className="w-full md:w-auto sm:w-auto "
+              <div className="flex text-center justify-center gap-3 md:gap-4">
+                <a href={project.link} className="w-full md:w-auto sm:w-auto"
                 target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
                   <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
-                    z-20 md:px-4 font-semibold inline-flex items-center px-3 justify-around gap-2 m-auto mt-8">
-                    <span>Visit Site</span>
-                    <ArrowUpRight className="md:size-5 md:block sm:size-0"/>
+                    z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8">
+                    <span className="sm:text-sm md:text-base">Visit Site</span>
+                    <ArrowUpRight className="md:size-5 md:block hidden"/>
                   </button>
                 </a>
-                <a href={project.code} className="w-full md:w-auto sm:w-auto "
+                <a href={project.code} className="w-full md:w-auto sm:w-auto"
                 target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
                   <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
-                    z-20 md:px-4 font-semibold inline-flex items-center px-3 justify-around gap-2 m-auto mt-8">
-                    <span>View Code</span>
-                    <GithubIcon className="size-5 md:block sm:hidden"/>
+                    z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8">
+                    <span className="sm:text-sm md:text-base">View Code</span>
+                    <GithubIcon className="size-5 md:block hidden"/>
                   </button>
                 </a>
               </div>
