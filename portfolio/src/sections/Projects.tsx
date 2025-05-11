@@ -26,7 +26,7 @@ const portfolioProjects = [
   {
     company: "Formly",
     year: "2025",
-    title: "Fullstack AI Drag and Drop Form Builder",
+    title: "Shareable Form Builder with Drag and Drop & AI ",
     results: [
       { title: "Create forms with drag and drop blocks, or write a prompt to create a form that you can share with a link, and track responses" },
       { title: "Built with Next.js, Tailwind CSS, React DnD, Kinde, and Google Gemini API. The backend uses PostgreSQL, hosted on Neon." },

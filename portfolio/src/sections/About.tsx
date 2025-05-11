@@ -103,7 +103,7 @@ export const AboutSection = () => {
     <div id="about" className="py-20 -mb-20">
       <div className="container">
         <SectionHeader
-          title="About Me"
+          title="About"
           eyebrow=""
           description=""
         />
