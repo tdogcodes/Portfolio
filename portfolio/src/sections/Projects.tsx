@@ -73,16 +73,17 @@ function useRefsInView(count: number) {
     refs.current = Array.from({ length: count }, () => React.createRef<HTMLDivElement>());
   }
 
-  const inViews = [];
-  for (let i = 0; i < count; i++) {
-    inViews.push(useInView(refs.current[i], { once: true }));
-  }
+  const inViews = [
+    useInView(refs.current[0], { once: true }),
+    useInView(refs.current[1], { once: true }),
+    useInView(refs.current[2], { once: true }),
+    useInView(refs.current[3], { once: true }),
+  ];
 
   return [refs.current, inViews] as const;
 }
 
-const [refs, inViews] = useRefsInView(portfolioProjects.length);
-
+const [refs, inViews] = useRefsInView(4);
 
   return <section id="projects" className="pb-16 lg:py-24 pt-16">
     <div className="flex flex-col sm:mx-10 md:mx-36 lg:mx-24">
