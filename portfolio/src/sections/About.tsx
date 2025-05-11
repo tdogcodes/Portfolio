@@ -18,7 +18,6 @@ import me from "@/assets/images/me.webp";
 import { CardHeader } from "@/components/CardHeader";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import React from "react";
 
 const toolboxItems = [
   {
@@ -83,20 +82,16 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
-  function useMultiInView(count: number) {
-    const refs = useRef<React.RefObject<HTMLDivElement>[]>([]);
   
-    // Only initialize refs on first render
-    if (refs.current.length !== count) {
-      refs.current = Array.from({ length: count }, () => React.createRef<HTMLDivElement>());
-    }
-  
-    const inViews = refs.current.map((ref) => useInView(ref, { once: true }));
-  
-    return [refs.current, inViews] as const;
-  }
-  
-  const [refs, inViews] = useMultiInView(4);
+  const ref0 = useRef(null);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const isInView0 = useInView(ref0, { once: true });
+  const isInView1 = useInView(ref1, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
 
   return (
     <div id="about" className="py-20 -mb-20">
@@ -109,9 +104,9 @@ export const AboutSection = () => {
         <div className="mt-20 flex flex-col gap-8">
           <div className="md:grid md:grid-cols-5 md:gap-8">
             <motion.div
-              ref={refs[0]}
+              ref={ref0}
               initial={{ opacity: 0, y: 50 }}
-              animate={inViews[0] ? { opacity: 1, y: 0 } : {}}
+              animate={isInView0 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1 }}
               className="mb-8 md:mb-0 md:col-span-2"
             >
@@ -132,9 +127,9 @@ export const AboutSection = () => {
               </Card>
             </motion.div>
             <motion.div
-              ref={refs[1]}
+              ref={ref1}
               initial={{ opacity: 0, y: 50 }}
-              animate={inViews[1] ? { opacity: 1, y: 0 } : {}}
+              animate={isInView1 ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1 }}
               className="md:col-span-3 "
             >
@@ -162,9 +157,9 @@ export const AboutSection = () => {
             </motion.div>
           </div>
           <motion.div
-            ref={refs[2]}
+            ref={ref2}
             initial={{ opacity: 0, y: 50 }}
-            animate={inViews[2] ? { opacity: 1, y: 0 } : {}}
+            animate={isInView2 ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1 }}
           >
             <Card className="gap-4">
@@ -190,9 +185,9 @@ export const AboutSection = () => {
             </Card>
           </motion.div>
           <motion.div
-            ref={refs[3]}
+            ref={ref3}
             initial={{ opacity: 0, y: 50 }}
-            animate={inViews[3] ? { opacity: 1, y: 0 } : {}}
+            animate={isInView3 ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1 }}
           >
             <Card className="h-[320px] p-0 relative ">

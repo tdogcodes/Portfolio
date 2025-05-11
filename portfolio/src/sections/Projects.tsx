@@ -66,20 +66,22 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
 
-function useMultiInView(count: number) {
-  const refs = useRef<React.RefObject<HTMLDivElement>[]>([]);
+function useRefsInView(count: number) {
+  const refs = useRef<Array<React.RefObject<HTMLDivElement>>>([]);
 
-  // Only initialize refs on first render
   if (refs.current.length !== count) {
     refs.current = Array.from({ length: count }, () => React.createRef<HTMLDivElement>());
   }
 
-  const inViews = refs.current.map((ref) => useInView(ref, { once: true }));
+  const inViews = [];
+  for (let i = 0; i < count; i++) {
+    inViews.push(useInView(refs.current[i], { once: true }));
+  }
 
   return [refs.current, inViews] as const;
 }
 
-const [refs, inViews] = useMultiInView(portfolioProjects.length);
+const [refs, inViews] = useRefsInView(portfolioProjects.length);
 
 
   return <section id="projects" className="pb-16 lg:py-24 pt-16">
