@@ -1,7 +1,7 @@
 "use client";
 import Prescripto from "@/assets/images/prescriptoPic.png";
 import LayersLanding from "@/assets/images/layersPic.png";
-import FormlyAI from "@/assets/images/formlyai.png";
+import FormlyAI from "@/assets/images/formlyai.jpg";
 import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
