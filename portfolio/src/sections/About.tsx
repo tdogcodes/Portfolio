@@ -18,6 +18,7 @@ import me from "@/assets/images/me.webp";
 import { CardHeader } from "@/components/CardHeader";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import React from "react";
 
 const toolboxItems = [
   {
@@ -82,8 +83,20 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
-  const refs = [useRef(null), useRef(null), useRef(null), useRef(null)];
-  const inViews = refs.map((ref) => useInView(ref, { once: true }));
+  function useMultiInView(count: number) {
+    const refs = useRef<React.RefObject<HTMLDivElement>[]>([]);
+  
+    // Only initialize refs on first render
+    if (refs.current.length !== count) {
+      refs.current = Array.from({ length: count }, () => React.createRef<HTMLDivElement>());
+    }
+  
+    const inViews = refs.current.map((ref) => useInView(ref, { once: true }));
+  
+    return [refs.current, inViews] as const;
+  }
+  
+  const [refs, inViews] = useMultiInView(4);
 
   return (
     <div id="about" className="py-20 -mb-20">

@@ -11,6 +11,7 @@ import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
+import React from "react";
 
 const portfolioProjects = [
   {
@@ -65,9 +66,20 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
 
-const refs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+function useMultiInView(count: number) {
+  const refs = useRef<React.RefObject<HTMLDivElement>[]>([]);
 
-const inViews = refs.map(ref => useInView(ref, { once: true }));
+  // Only initialize refs on first render
+  if (refs.current.length !== count) {
+    refs.current = Array.from({ length: count }, () => React.createRef<HTMLDivElement>());
+  }
+
+  const inViews = refs.current.map((ref) => useInView(ref, { once: true }));
+
+  return [refs.current, inViews] as const;
+}
+
+const [refs, inViews] = useMultiInView(portfolioProjects.length);
 
 
   return <section id="projects" className="pb-16 lg:py-24 pt-16">
@@ -76,9 +88,9 @@ const inViews = refs.map(ref => useInView(ref, { once: true }));
       <div className="flex flex-col lg:flex-row gap-5 lg:justify-center lg:flex-wrap overflow-hidden">
         {portfolioProjects.map((project, i) => (
           <motion.div ref={refs[i]} initial={{ opacity: 0, y: 50 }} animate={inViews[i] ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1 }} key={project.title} className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 flex flex-col align-center
-           bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2
-           after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 md:pt-12 md:px-10
-            px-8 after:pointer-events-none lg:pb-10"> 
+                     bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2
+                     after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 md:pt-12 md:px-10
+                      px-8 after:pointer-events-none lg:pb-10"> 
                 <div className="absolute inset-0 opacity-5 -z-10" style={{ backgroundImage: `url(${grainImage.src})`}}></div> 
                 <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex 
                 gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text p-2 mt-4">
