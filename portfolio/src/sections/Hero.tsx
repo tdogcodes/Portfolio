@@ -10,7 +10,7 @@ export const HeroSection = () => {
   return (
     <div
       id="home"
-      className="scroll-mt-20 py-32 my-16 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+      className="scroll-mt-20 py-32 my-6 sm:my-24 md:py-48 lg:py-55 relative z-0 overflow-x-clip"
     >
       <div
         className="absolute inset-0"

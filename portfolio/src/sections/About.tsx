@@ -12,6 +12,8 @@ import GitIcon from "@/assets/icons/git.svg";
 import TypescriptIcon from "@/assets/icons/typescript.svg";
 import NextjsIcon from "@/assets/icons/next.svg";
 import Zustand from "@/assets/icons/zustand.svg";
+import FramerMotion from "@/assets/icons/framerMotion.svg";
+import Postgres from "@/assets/icons/postgresql.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import me from "@/assets/images/me.webp";
@@ -29,11 +31,11 @@ const toolboxItems = [
     iconType: TypescriptIcon,
   },
   {
-    title: "HTML5",
+    title: "HTML",
     iconType: HtmlIcon,
   },
   {
-    title: "CSS3",
+    title: "CSS",
     iconType: CssIcon,
   },
   {
@@ -55,6 +57,10 @@ const toolboxItems = [
   {
     title: "Zustand",
     iconType: Zustand,
+  },
+  {
+    title: "PostgreSQL",
+    iconType: Postgres,
   },
 ];
 
@@ -97,8 +103,8 @@ export const AboutSection = () => {
     <div id="about" className="py-20 -mb-20">
       <div className="container">
         <SectionHeader
-          title="A Glimpse Into My World"
-          eyebrow="learn more about me"
+          title="About Me"
+          eyebrow=""
           description=""
         />
         <div className="mt-20 flex flex-col gap-8">
@@ -113,7 +119,7 @@ export const AboutSection = () => {
               <Card className="md:mt-8 lg:mt-0 md:pb-16 lg:pb-10">
                 <CardHeader
                   title="My School"
-                  description="Bachelor of Science in Computer Science"
+                  description="Bachelors of Computer Science"
                 />
                 <div className="w-40 mx-auto mt-8">
                   <Image
@@ -139,7 +145,7 @@ export const AboutSection = () => {
                   description="The tools I use to build web applications"
                 />
                 <div className="mt-5 flex flex-col items-center">
-                  <div className="">
+                  <div className="-mb-1">
                     {toolboxItems.map((item) => {
                       return (
                         <div
@@ -165,7 +171,7 @@ export const AboutSection = () => {
             <Card className="gap-4">
               <CardHeader
                 title="My Hobbies"
-                description="things I like besides web development"
+                description="Things I like besides web development"
               />
               <div>
                 <div>

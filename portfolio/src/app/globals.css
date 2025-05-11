@@ -34,6 +34,69 @@ body{
         radial-gradient(at 95% 65%, hsla(189,72%,73%,0.1) 0px, transparent 90%);
 }
 
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+ 
+  .slider {   
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden; 
+
+    @media only screen and (max-width: 375px) {
+      height: auto;
+      width: auto;
+    }
+
+    .image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      will-change: transform, opacity;
+    }
+  }
+
+  .buttons {
+
+    button {
+      outline: none;
+      border: none;
+      user-select: none;
+      padding: 10px 12px;
+      box-shadow: 0px 0px 30px #1f4c65;
+      transform: skewY(-5deg) rotate(5deg);
+      background-color: rgb(14, 14, 26);
+      font-family: inherit;
+      font-size: inherit;
+      color: white;
+      transition: .07s ease-out transform;
+
+      &:first-of-type {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: rgb(2,29,78);
+        background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.6) 60%);
+        color: rgb(4, 4, 38);
+        box-shadow: 0px 0px 60px #41a7dd;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:active {
+        transform: scale(.85) skewY(-5deg) rotate(5deg);
+      }
+    }
+  }   
+}
+
 .pretty-btn {
     padding: 1rem 2.5rem;
     border: none;

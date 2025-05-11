@@ -1,17 +1,26 @@
 "use client";
-import Prescripto from "@/assets/images/prescriptoPic.png";
-import LayersLanding from "@/assets/images/layersPic.png";
-import FormlyAI from "@/assets/images/formlyai.jpg";
+import Prescripto from "@/assets/images/prescripto/prescriptoPic.png";
+import LayersLanding from "@/assets/images/layers/layersland.jpg";
+import LayersFeat from "@/assets/images/layers/layersfeat.jpg";
+import LayersInt from "@/assets/images/layers/layersint.jpg";
+import LayersFaq from "@/assets/images/layers/layersfaq.jpg";
+import LayersText from "@/assets/images/layers/layerstext.jpg";
+import FormlyAI from "@/assets/images/formly/formlyai.jpg";
+import FormlyLanding from "@/assets/images/formly/formly-landing.jpg";
+import FormlyDash from "@/assets/images/formly/formlydash.jpg";
+import FormlyRes from "@/assets/images/formly/formlyres.jpg";
+import FormlySS from "@/assets/images/formly/formlyss.jpg";
+import FormStats from "@/assets/images/formly/formstats.jpg";
 import AkashaPage from "@/assets/images/akashaSS.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import grainImage from "@/assets/images/grain.jpg";
-import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import React from "react";
+import Carousel from "@/components/Carousel";
 
 const portfolioProjects = [
   {
@@ -24,7 +33,32 @@ const portfolioProjects = [
     ],
     link: "https://formly-henna.vercel.app",
     code: "https://github.com/tdogcodes/Formly",
-    image: FormlyAI,
+    images: [
+      {
+        id: 0,
+        imageSrc: FormlyAI,
+      },
+      {
+        id: 1,
+        imageSrc: FormlyDash,
+      },
+      {
+        id: 2,
+        imageSrc: FormlyLanding,
+      },
+      {
+        id: 3,
+        imageSrc: FormlyRes,
+      },
+      {
+        id: 4,
+        imageSrc: FormlySS,
+      },
+      {
+        id: 5,
+        imageSrc: FormStats,
+      }
+    ]
   },
   {
     company: "Layers.to",
@@ -36,7 +70,28 @@ const portfolioProjects = [
     ],
     link: "https://layers-design.vercel.app",
     code: "https://github.com/tdogcodes/Layers-Landing-Page",
-    image: LayersLanding,
+    images: [
+      {
+        id: 1,
+        imageSrc: LayersLanding,
+      },
+      {
+        id: 2,
+        imageSrc: LayersFeat,
+      },
+      {
+        id: 3,
+        imageSrc: LayersInt,
+      },
+      {
+        id: 4,
+        imageSrc: LayersFaq,
+      },
+      {
+        id: 5,
+        imageSrc: LayersText,
+      }
+    ]
   },
   {
     company: "Akasha Terminal",
@@ -48,7 +103,12 @@ const portfolioProjects = [
     ],
     link: "https://akasha-terminal.vercel.app",
     code: "https://github.com/tdogcodes/Genshin-Impact-Messenging",
-    image: AkashaPage,
+    images: [
+      {
+        id: 2,
+        imageSrc: AkashaPage,
+      }
+    ]
   },
   {
     company: "Prescripto",
@@ -60,7 +120,12 @@ const portfolioProjects = [
     ],
     link: "https://prescripto-healthcare.vercel.app",
     code: "https://github.com/tdogcodes/Prescripto-Healthcare",
-    image: Prescripto,
+    images: [
+      {
+        id: 3 ,
+        imageSrc: Prescripto,
+      }
+    ]
   },
 ];
 
@@ -87,7 +152,7 @@ const [refs, inViews] = useRefsInView(4);
 
   return <section id="projects" className="pb-16 lg:py-24 pt-16">
     <div className="flex flex-col sm:mx-10 md:mx-36 lg:mx-24">
-      <SectionHeader title="Real World Projects" eyebrow="Here's what I've worked on" description=""/>
+      <SectionHeader title="Personal Projects" eyebrow="" description=""/>
       <div className="flex flex-col lg:flex-row gap-5 lg:justify-center lg:flex-wrap overflow-hidden">
         {portfolioProjects.map((project, i) => (
           <motion.div ref={refs[i]} initial={{ opacity: 0, y: 50 }} animate={inViews[i] ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1 }} key={project.title} className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 flex flex-col align-center
@@ -112,8 +177,8 @@ const [refs, inViews] = useRefsInView(4);
                 ))}
             </ul>
            <div className="flex flex-col">
-              <div className="flex text-center justify-center gap-3 md:gap-4">
-                <a href={project.link} className="w-full md:w-auto sm:w-auto"
+              <div className="flex text-center justify-center gap-3 md:mb-0 mb-6 md:gap-4">
+                <a href={project.link} className="w-full  z-20 md:w-auto sm:w-auto"
                 target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
                   <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
                     z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8">
@@ -121,7 +186,7 @@ const [refs, inViews] = useRefsInView(4);
                     <ArrowUpRight className="md:size-5 md:block hidden"/>
                   </button>
                 </a>
-                <a href={project.code} className="w-full md:w-auto sm:w-auto"
+                <a href={project.code} className="w-full z-20 md:w-auto sm:w-auto"
                 target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
                   <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
                     z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8">
@@ -130,7 +195,7 @@ const [refs, inViews] = useRefsInView(4);
                   </button>
                 </a>
               </div>
-              <Image src={project.image} alt={project.title} className="mt-8 -mb-4 lg:mt-4 lg:mx-auto lg:max-w-[90%] w-auto h-auto object-contain border border-white/20 rounded-3xl" />
+              <Carousel images={project.images.map(image => ({ ...image, imageSrc: image.imageSrc.src }))}/>
            </div>
           </motion.div>
         ))}
