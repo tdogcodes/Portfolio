@@ -62,7 +62,7 @@ const Carousel = ( { images }: Props ) => {
   return (
     <main>
       <div className="slider-container">
-        <div className="slider hidden md:block lg:-mt-12 lg:-mb-10 ">
+        <div className="slider hidden md:block lg:mt-0 lg:-pb-10 ">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={imageCount}
@@ -80,8 +80,8 @@ const Carousel = ( { images }: Props ) => {
           </AnimatePresence>
         </div>
 
-        <div className="buttons hidden md:block sm:-mt-12 sm:mb-4 md:mt-0 md:mb-4 lg:my-0">
-          <button onClick={() => swipeToImage(-1)}>PREV</button>
+        <div className="buttons hidden md:block mt-0 sm:pt-6 pb-6 lg:pb-0 ">
+          <button  onClick={() => swipeToImage(-1)}>PREV</button>
           <button onClick={() => swipeToImage(1)}>NEXT</button>
         </div>
       </div>

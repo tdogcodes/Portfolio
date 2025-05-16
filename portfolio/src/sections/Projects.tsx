@@ -6,7 +6,7 @@ import LayersInt from "@/assets/images/layers/layersint.jpg";
 import LayersFaq from "@/assets/images/layers/layersfaq.jpg";
 import LayersText from "@/assets/images/layers/layerstext.jpg";
 import FormlyAI from "@/assets/images/formly/formlyai.jpg";
-import FormlyLanding from "@/assets/images/formly/formly-landing.jpg";
+import FormlyLanding from "@/assets/images/formly/formlyland.png";
 import FormlyDash from "@/assets/images/formly/formlydash.jpg";
 import FormlyRes from "@/assets/images/formly/formlyres.jpg";
 import FormlySS from "@/assets/images/formly/formlyss.jpg";
@@ -28,15 +28,15 @@ const portfolioProjects = [
     year: "2025",
     title: "Shareable Form Builder with Drag and Drop & AI ",
     results: [
-      { title: "Create forms with drag and drop blocks, or write a prompt to create a form that you can share with a link, and track responses" },
-      { title: "Built with Next.js, Tailwind CSS, React DnD, Kinde, and Google Gemini API. The backend uses PostgreSQL, hosted on Neon." },
+      { title: "Create forms with drag and drop blocks, or use AI to create a form that you can share with a link, and track responses" },
+      { title: "Built with Next.js, Tailwind CSS, React DnD, and Google Gemini API. The backend uses PostgreSQL, Prisma & Neon." },
     ],
     link: "https://formly-henna.vercel.app",
     code: "https://github.com/tdogcodes/Formly",
     images: [
       {
         id: 0,
-        imageSrc: FormlyAI,
+        imageSrc: FormlyLanding,
       },
       {
         id: 1,
@@ -44,7 +44,7 @@ const portfolioProjects = [
       },
       {
         id: 2,
-        imageSrc: FormlyLanding,
+        imageSrc: FormlyAI,
       },
       {
         id: 3,
@@ -177,7 +177,7 @@ const [refs, inViews] = useRefsInView(4);
                 ))}
             </ul>
            <div className="flex flex-col">
-              <div className="flex text-center justify-center gap-3 md:mb-0 mb-6 md:gap-4">
+              <div className="flex text-center justify-center gap-3 mb-0 sm:mb-6 md:gap-4">
                 <a href={project.link} className="w-full  z-20 md:w-auto sm:w-auto"
                 target={"_blank" + "_self"} rel={"noopener noreferrer" + undefined}>
                   <button className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
@@ -195,7 +195,7 @@ const [refs, inViews] = useRefsInView(4);
                   </button>
                 </a>
               </div>
-              <Carousel images={project.images.map(image => ({ ...image, imageSrc: image.imageSrc.src }))}/>
+                <Carousel  images={project.images.map(image => ({ ...image, imageSrc: image.imageSrc.src }))}/>       
            </div>
           </motion.div>
         ))}

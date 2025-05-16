@@ -38,28 +38,36 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  position: relative; 
+  overflow: hidden;
+  border-radius: 0.375rem;
  
-  .slider {   
-    position: relative;
-    height: 400px;
-    width: 100%;
-    overflow: hidden; 
+  .slider {
+  position: relative;
+  height: 260px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  object-fit: cover;
+  
 
     @media only screen and (max-width: 375px) {
       height: auto;
       width: auto;
     }
 
-    .image {
+     .image {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       will-change: transform, opacity;
-    }
+      overflow: hidden;
+      border-radius: 0.375rem;
+      
+  }
   }
 
   .buttons {
@@ -69,7 +77,7 @@ body{
       border: none;
       user-select: none;
       padding: 10px 12px;
-      box-shadow: 0px 0px 30px #1f4c65;
+      box-shadow: 0px 0px 2px #1f4c65;
       transform: skewY(-5deg) rotate(5deg);
       background-color: rgb(14, 14, 26);
       font-family: inherit;
@@ -86,7 +94,7 @@ body{
         background: rgb(2,29,78);
         background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.6) 60%);
         color: rgb(4, 4, 38);
-        box-shadow: 0px 0px 60px #41a7dd;
+        box-shadow: 0px 0px 10px #41a7dd;
         transition: all 0.4s ease-in-out;
       }
 
