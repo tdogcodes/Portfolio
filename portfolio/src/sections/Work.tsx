@@ -61,7 +61,7 @@ const WorkSection = () => {
                         {job.title}
                       </h3>
                       <h3 className="font-serif text-2xl flex text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-sky-400 flex-nowrap md:text-4xl">
-                        -
+                        {"-"}
                       </h3>
                       <Image
                         alt="GungHo logo"
