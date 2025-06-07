@@ -5,7 +5,6 @@ import GungHoLogo from "@/assets/images/workExperience/GungHo_Horizontal_ColorW.
 import GunghoSite from "@/assets/images/workExperience/Capture.jpg";
 import React from "react";
 import Image from "next/image";
-import { image } from "@uiw/react-md-editor";
 
 const WorkSection = () => {
   const workExperience = [
