@@ -273,7 +273,7 @@ export const ProjectsSection = () => {
           transition={{ duration: 1 }}
           className="flex justify-center mt-10"
         >
-          <LoadMore outerStyle=" w-[20%]" />
+          <LoadMore outerStyle=" w-[14em]" />
         </motion.div>
       </div>
     </section>
