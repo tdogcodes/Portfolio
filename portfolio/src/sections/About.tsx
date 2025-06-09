@@ -20,6 +20,7 @@ import me from "@/assets/images/me.webp";
 import { CardHeader } from "@/components/CardHeader";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Keycap from "@/components/keycap/Keycap";
 
 const toolboxItems = [
   {
@@ -88,7 +89,6 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
-  
   const ref0 = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -102,13 +102,9 @@ export const AboutSection = () => {
   return (
     <div id="about" className="py-20 -mb-20">
       <div className="container">
-        <SectionHeader
-          title="About"
-          eyebrow=""
-          description=""
-        />
+        <SectionHeader title="About" eyebrow="" description="" />
         <div className="mt-20 flex flex-col gap-8">
-          <div className="md:grid md:grid-cols-5 md:gap-8">
+          <div className="flex- items-center md:grid md:grid-cols-5 md:gap-8">
             <motion.div
               ref={ref0}
               initial={{ opacity: 0, y: 50 }}
@@ -116,18 +112,16 @@ export const AboutSection = () => {
               transition={{ duration: 1 }}
               className="mb-8 md:mb-0 md:col-span-2"
             >
-              <Card className="md:mt-8 lg:mt-0 md:pb-16 lg:pb-10">
+              <Card className="lg:mt-0 md:pb-16 lg:pb-10">
                 <CardHeader
                   title="My School"
                   description="Bachelors of Computer Science"
                 />
-                <div className="w-40 mx-auto mt-8">
+                <div className="mx-auto pt-4">
                   <Image
                     src={wguLogo}
                     alt="School Logo"
-                    className="duration-300 rounded-full transition-shadow hover:hover:shadow-[5px_5px_rgba(0,98,90,0.4),10px_10px_rgba(0,98,90,0.3),15px_15px_rgba(0,98,90,0.2),20px_20px_rgba(0,98,90,0.1),25px_25px_rgba(0,98,90,0.05)]"
-                    width={300}
-                    height={300}
+                    className="w-[120px] md:w-[160px] duration-300 rounded-full transition-shadow hover:shadow-[5px_5px_rgba(0,98,90,0.4),10px_10px_rgba(0,98,90,0.3),15px_15px_rgba(0,98,90,0.2),20px_20px_rgba(0,98,90,0.1),25px_25px_rgba(0,98,90,0.05)]"
                   />
                 </div>
               </Card>
@@ -144,17 +138,14 @@ export const AboutSection = () => {
                   title="My Toolbox"
                   description="The tools I use to build web applications"
                 />
-                <div className="mt-5 flex flex-col items-center">
-                  <div className="-mb-1">
+                <div className="mt-5 flex flex-col items-center justify-center">
+                  <div className="flex flex-wrap justify-center gap-2">
                     {toolboxItems.map((item) => {
                       return (
-                        <div
+                        <Keycap
                           key={item.title}
-                          className="inline-flex items-center gap-4 py-2 px-3 hover:outline-emerald-300 hover:scale-95 transition-all duration-300 outline outline-2 outline-white/10 rounded-lg m-1 -translate-x"
-                        >
-                          <TechIcon component={item.iconType} />
-                          <span className="font-semibold">{item.title}</span>
-                        </div>
+                          label={<TechIcon component={item.iconType} />}
+                        />
                       );
                     })}
                   </div>
@@ -173,20 +164,18 @@ export const AboutSection = () => {
                 title="My Hobbies"
                 description="Things I like besides web development"
               />
-              <div>
-                <div>
-                  {hobbies.map((hobby) => (
-                    <div
-                      key={hobby.title}
-                      className="inline-flex mx-.5  hover:scale-95 transition-all duration-300 gap-2 px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5"
-                    >
-                      <span className="font-medium text-gray-950">
-                        {hobby.title}
-                      </span>
-                      <span>{hobby.emoji}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="w-auto mx-auto">
+                {hobbies.map((hobby) => (
+                  <div
+                    key={hobby.title}
+                    className="inline-flex mx-.5  hover:scale-95 transition-all duration-300 mx-1 px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5"
+                  >
+                    <span className="font-medium text-gray-950">
+                      {hobby.title}
+                    </span>
+                    <span>{hobby.emoji}</span>
+                  </div>
+                ))}
               </div>
             </Card>
           </motion.div>

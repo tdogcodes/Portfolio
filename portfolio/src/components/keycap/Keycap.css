@@ -1,0 +1,52 @@
+.keycap {
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.keycap::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 10px;
+  box-shadow:
+    -10px -10px 10px rgba(255, 255, 255, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+  transition: all 0.1s ease-in-out;
+  z-index: 0;
+}
+
+.keycap:hover {
+  transform: translateY(2px);
+  box-shadow:
+    inset -4px 0 4px rgba(0, 0, 0, 0.1),
+    inset 0 -4px 4px rgba(0, 0, 0, 0.15),
+    0 0 0 2px rgba(0, 0, 0, 0.5),
+    5px 10px 15px rgba(110, 231, 183, 0.8);
+}
+
+.keycap:hover::before {
+  top: 5px;
+  left: 5px;
+  bottom: 11px;
+  right: 11px;
+  box-shadow:
+    -5px -5px 5px rgba(255, 255, 255, 0.15),
+    5px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.keycap:hover .letter {
+  transform: translateY(1px);
+}
