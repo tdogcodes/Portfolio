@@ -11,7 +11,7 @@ const WorkSection = () => {
     {
       company: "GungHo Online Entertainment",
       year: "2024",
-      title: "Fullstack Developer",
+      title: "Web Developer",
       logo: GungHoLogo,
       image: GunghoSite,
       results: [

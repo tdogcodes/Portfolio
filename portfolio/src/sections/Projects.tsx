@@ -11,7 +11,9 @@ import FormlyDash from "@/assets/images/formly/formlydash.jpg";
 import FormlyRes from "@/assets/images/formly/formlyres.jpg";
 import FormlySS from "@/assets/images/formly/formlyss.jpg";
 import FormStats from "@/assets/images/formly/formstats.jpg";
-import AkashaPage from "@/assets/images/akasha/akashaSS.png";
+import WebChatHome from "@/assets/images/akasha/webchatHome.png";
+import WebChatUsers from "@/assets/images/akasha/webchatUsers.jpg";
+import WebChatChat from "@/assets/images/akasha/webchatChat.jpg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GithubIcon from "@/assets/icons/github.svg";
@@ -85,31 +87,31 @@ const portfolioProjects = [
     code: "https://github.com/tdogcodes/Layers-Landing-Page",
     images: [
       {
-        id: 1,
+        id: 0,
         imageSrc: LayersLanding,
       },
       {
-        id: 2,
+        id: 1,
         imageSrc: LayersFeat,
       },
       {
-        id: 3,
+        id: 2,
         imageSrc: LayersInt,
       },
       {
-        id: 4,
+        id: 3,
         imageSrc: LayersFaq,
       },
       {
-        id: 5,
+        id: 4,
         imageSrc: LayersText,
       },
     ],
   },
   {
-    company: "Akasha Terminal",
+    company: "WebChat",
     year: "2024",
-    title: "Realtime Chat App for Genshin Impact",
+    title: "Realtime Chat App with React and Firebase",
     results: [
       {
         title:
@@ -124,8 +126,16 @@ const portfolioProjects = [
     code: "https://github.com/tdogcodes/Genshin-Impact-Messenging",
     images: [
       {
+        id: 0,
+        imageSrc: WebChatHome,
+      },
+      {
+        id: 1,
+        imageSrc: WebChatUsers,
+      },
+      {
         id: 2,
-        imageSrc: AkashaPage,
+        imageSrc: WebChatChat,
       },
     ],
   },
@@ -147,7 +157,7 @@ const portfolioProjects = [
     code: "https://github.com/tdogcodes/Prescripto-Healthcare",
     images: [
       {
-        id: 3,
+        id: 0,
         imageSrc: Prescripto,
       },
     ],
