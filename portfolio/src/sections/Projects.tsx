@@ -13,14 +13,14 @@ import FormlySS from "@/assets/images/formly/formlyss.jpg";
 import FormStats from "@/assets/images/formly/formstats.jpg";
 import WebChatHome from "@/assets/images/akasha/webchatHome.png";
 import WebChatUsers from "@/assets/images/akasha/webchatUsers.jpg";
-import WebChatChat from "@/assets/images/akasha/webchatChat.jpg";
+import WebChatChat from "@/assets/images/akasha/webchatChat.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useInView, motion } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 import Carousel from "@/components/Carousel";
 import LoadMore from "@/components/loadMore/LoadMore";
@@ -119,7 +119,7 @@ const portfolioProjects = [
       },
       {
         title:
-          "Manages user data with Zustand and stores it in Firestore, uses Firebase Auth, and styled with CSS",
+          "Manages user data with Zustand and stores it in Firestore, uses Firebase Auth, and styled with Sass CSS",
       },
     ],
     link: "https://akasha-terminal.vercel.app",
@@ -141,12 +141,12 @@ const portfolioProjects = [
   },
   {
     company: "Prescripto",
-    year: "2025",
-    title: "Healthcare Platform for Doctors and Patients",
+    year: "2024",
+    title: "Frontend for Doctor Appointment Scheduling",
     results: [
       {
         title:
-          "Developed a responsive React frontend for a healthcare platform,patients can schedule and manage appointments",
+          "Developed a responsive React frontend for a healthcare platform, patients can schedule and manage appointments",
       },
       {
         title:
@@ -165,127 +165,145 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  function useRefsInView(count: number) {
-    const refs = useRef<Array<React.RefObject<HTMLDivElement>>>([]);
+  const [visibleCount, setVisibleCount] = useState(4);
 
-    if (refs.current.length !== count) {
-      refs.current = Array.from({ length: count }, () =>
-        React.createRef<HTMLDivElement>()
-      );
-    }
+  const loadMoreRef = useRef(null);
 
-    const inViews = [
-      useInView(refs.current[0], { once: true }),
-      useInView(refs.current[1], { once: true }),
-      useInView(refs.current[2], { once: true }),
-      useInView(refs.current[3], { once: true }),
-    ];
-
-    return [refs.current, inViews] as const;
-  }
-
-  const loadMoreRef = useRef<HTMLDivElement>(null);
   const loadMoreInView = useInView(loadMoreRef, { once: true });
 
-  const [refs, inViews] = useRefsInView(4);
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev +2);
+  };
 
   return (
     <section id="projects" className="pb-16 lg:py-24 pt-16">
       <div className="flex flex-col sm:mx-10 md:mx-36 lg:mx-24">
         <SectionHeader title="Personal Projects" eyebrow="" description="" />
+
         <div className="flex flex-col lg:flex-row gap-5 lg:justify-center lg:flex-wrap overflow-hidden">
-          {portfolioProjects.map((project, i) => (
-            <motion.div
-              ref={refs[i]}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inViews[i] ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1 }}
-              key={project.title}
-              className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 flex flex-col align-center
-                     bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2
-                     after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 md:pt-12 md:px-10
-                      px-8 after:pointer-events-none lg:pb-10"
-            >
-              <div
-                className="absolute inset-0 opacity-5 -z-10"
-                style={{ backgroundImage: `url(${grainImage.src})` }}
-              ></div>
-              <div
-                className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex 
-                gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text p-2 mt-4"
-              >
-                <span>{project.company}</span>
-                <span>&bull;</span>
-                <span>{project.year}</span>
-              </div>
-              <h3 className="font-serif text-2xl mt-2 md:text-4xl">
-                {project.title}
-              </h3>
-              <hr className="border-t-2 border-white/10 mt-4" />
-              <ul className=" flex lg:h-[50%] flex-col gap-4 mt-4 md:mt-5">
-                {project.results.map((result) => (
-                  <li
-                    key={result.title}
-                    className="flex gap-2 text-sm md:text-base text-white/50"
-                  >
-                    <CheckCircleIcon className=" lg:min-w-5 size-5 md:size-6" />
-                    <span className="">{result.title}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="flex flex-col">
-                <div className="flex text-center justify-center gap-3 mb-0 sm:mb-6 md:gap-4">
-                  <a
-                    href={project.link}
-                    className="w-full  z-20 md:w-auto sm:w-auto"
-                    target={"_blank" + "_self"}
-                    rel={"noopener noreferrer" + undefined}
-                  >
-                    <button
-                      className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
-                    z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8"
-                    >
-                      <span className="sm:text-sm md:text-base">
-                        Visit Site
-                      </span>
-                      <ArrowUpRight className="md:size-5 md:block hidden" />
-                    </button>
-                  </a>
-                  <a
-                    href={project.code}
-                    className="w-full z-20 md:w-auto sm:w-auto"
-                    target={"_blank" + "_self"}
-                    rel={"noopener noreferrer" + undefined}
-                  >
-                    <button
-                      className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
-                    z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8"
-                    >
-                      <span className="sm:text-sm md:text-base">View Code</span>
-                      <GithubIcon className="size-5 md:block hidden" />
-                    </button>
-                  </a>
-                </div>
-                <Carousel
-                  images={project.images.map((image) => ({
-                    ...image,
-                    imageSrc: image.imageSrc.src,
-                  }))}
-                />
-              </div>
-            </motion.div>
+          {portfolioProjects.slice(0, visibleCount).map((project) => (
+            <ProjectCard project={project} key={project.title} />
           ))}
         </div>
-        <motion.div
-          ref={loadMoreRef}
-          initial={{ opacity: 0, y: 50 }}
-          animate={loadMoreInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1 }}
-          className="flex justify-center mt-10"
-        >
-          <LoadMore outerStyle=" w-[14em]" />
-        </motion.div>
+
+        {visibleCount < portfolioProjects.length && (
+          <motion.div
+            onClick={handleLoadMore}
+            ref={loadMoreRef}
+            initial={{ opacity: 0, y: 50 }}
+            animate={loadMoreInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1 }}
+            className="flex justify-center mt-10"
+          >
+            <LoadMore outerStyle=" w-[14em]" />
+          </motion.div>
+        )}
       </div>
     </section>
+  );
+};
+
+type Project = (typeof portfolioProjects)[number];
+
+//the ProjectCard component is used to display each project in the portfolio
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const ref = useRef(null);
+
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1 }}
+      className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 flex flex-col align-center
+
+bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2
+
+after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 md:pt-12 md:px-10
+
+px-8 after:pointer-events-none lg:pb-10"
+    >
+      <div
+        className="absolute inset-0 opacity-5 -z-10"
+        style={{ backgroundImage: `url(${grainImage.src})` }}
+      ></div>
+
+      <div
+        className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex
+
+gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text p-2 mt-4"
+      >
+        <span>{project.company}</span>
+
+        <span>&bull;</span>
+
+        <span>{project.year}</span>
+      </div>
+
+      <h3 className="font-serif text-2xl mt-2 md:text-4xl">{project.title}</h3>
+
+      <hr className="border-t-2 border-white/10 mt-4" />
+
+      <ul className=" flex lg:h-[50%] flex-col gap-4 mt-4 md:mt-5">
+        {project.results.map((result) => (
+          <li
+            key={result.title}
+            className="flex gap-2 text-sm md:text-base text-white/50"
+          >
+            <CheckCircleIcon className=" lg:min-w-5 size-5 md:size-6" />
+
+            <span className="">{result.title}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="flex flex-col">
+        <div className="flex text-center justify-center gap-3 mb-0 sm:mb-6 md:gap-4">
+          <a
+            href={project.link}
+            className="w-full  z-20 md:w-auto sm:w-auto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
+
+z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8"
+            >
+              <span className="sm:text-sm md:text-base">Visit Site</span>
+
+              <ArrowUpRight className="md:size-5 md:block hidden" />
+            </button>
+          </a>
+
+          <a
+            href={project.code}
+            className="w-full z-20 md:w-auto sm:w-auto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              className=" h-12 md:w-auto rounded-xl lg:mt-3 pretty-btn
+
+z-20 md:px-4 font-semibold inline-flex items-center px-2 justify-around gap-2 m-auto mt-8"
+            >
+              <span className="sm:text-sm md:text-base">View Code</span>
+
+              <GithubIcon className="size-5 md:block hidden" />
+            </button>
+          </a>
+        </div>
+
+        <Carousel
+          images={project.images.map((image: any) => ({
+            ...image,
+
+            imageSrc: image.imageSrc.src,
+          }))}
+        />
+      </div>
+    </motion.div>
   );
 };
