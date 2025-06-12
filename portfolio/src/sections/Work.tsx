@@ -1,10 +1,12 @@
+"use client"
+
 import { SectionHeader } from "@/components/SectionHeader";
 import grainImage from "@/assets/images/grain.jpg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GungHoLogo from "@/assets/images/workExperience/GungHo_Horizontal_ColorW.png";
-import GunghoSite from "@/assets/images/workExperience/Capture.jpg";
 import React from "react";
 import Image from "next/image";
+import Carousel from "@/components/Carousel";
 
 const WorkSection = () => {
   const workExperience = [
@@ -13,7 +15,6 @@ const WorkSection = () => {
       year: "2024",
       title: "Web Developer",
       logo: GungHoLogo,
-      image: GunghoSite,
       results: [
         {
           title:
@@ -71,17 +72,17 @@ const WorkSection = () => {
                 />
               </div>
               <hr className="border-t-2 border-white/10 mt-4" />
-              <ul className="flex m-auto py-4 lg:h-[50%] flex-col md:flex-row gap-4 mt-4 md:mt-5">
-                {job.results.map((result) => (
-                  <li
-                    key={result.title}
-                    className="flex gap-2 text-sm md:text-base text-white/50"
-                  >
-                    <CheckCircleIcon className=" lg:min-w-5 size-5 md:size-6" />
-                    <span className="">{result.title}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="flex m-auto py-4 lg:h-[50%] flex-col md:flex-row gap-4 mt-4 md:mt-5">
+                  {job.results.map((result) => (
+                    <li
+                      key={result.title}
+                      className="flex gap-2 text-sm md:text-base text-white/50"
+                    >
+                      <CheckCircleIcon className=" lg:min-w-5 size-5 md:size-6" />
+                      <span className="">{result.title}</span>
+                    </li>
+                  ))}
+                </ul>
             </div>
           ))}
         </div>

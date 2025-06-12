@@ -1,5 +1,8 @@
 "use client";
 import Prescripto from "@/assets/images/prescripto/prescriptoPic.png";
+import PrescriptoDocs from "@/assets/images/prescripto/prescriptoDocs.png";
+import PrescriptoAppt from "@/assets/images/prescripto/prescriptoAppt.png";
+import PrescriptoUserAppt from "@/assets/images/prescripto/prescriptoUserAppt.png";
 import LayersLanding from "@/assets/images/layers/layersland.jpg";
 import LayersFeat from "@/assets/images/layers/layersfeat.jpg";
 import LayersInt from "@/assets/images/layers/layersint.jpg";
@@ -11,16 +14,20 @@ import FormlyDash from "@/assets/images/formly/formlydash.jpg";
 import FormlyRes from "@/assets/images/formly/formlyres.jpg";
 import FormlySS from "@/assets/images/formly/formlyss.jpg";
 import FormStats from "@/assets/images/formly/formstats.jpg";
-import WebChatHome from "@/assets/images/akasha/webchatHome.png";
-import WebChatUsers from "@/assets/images/akasha/webchatUsers.jpg";
-import WebChatChat from "@/assets/images/akasha/webchatChat.png";
+import WebChatHome from "@/assets/images/webchat/webchatHome.png";
+import WebChatChat from "@/assets/images/webchat/webchatChat.png";
+import Gameplay2048 from "@/assets/images/2048/2048Game.png";
+import Home2048 from "@/assets/images/2048/2048Home.png";
+import Features2048 from "@/assets/images/2048/2048Features.png";
+import Footer2048 from "@/assets/images/2048/2048Footer.png";
+import Rules2048 from "@/assets/images/2048/2048Rules.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useInView, motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import React from "react";
 import Carousel from "@/components/Carousel";
 import LoadMore from "@/components/loadMore/LoadMore";
@@ -70,6 +77,45 @@ const portfolioProjects = [
     ],
   },
   {
+    company: "2048 Tile Merging Game",
+    year: "2025",
+    title: "2048 Tile Merging Game & Animated Landing Page",
+    results: [
+      {
+        title:
+          "The game itself is made with only JavaScript, HTML, and CSS. no third party libraries or frameworks used.",
+      },
+      {
+        title:
+          "The landing page was made with React, Tailwind, and Framer Motion. It features animations and a responsive design.",
+      },
+    ],
+    link: "https://2048-landing-page.vercel.app",
+    code: "https://github.com/tdogcodes/Javascript-2048-Game",
+    images: [
+      {
+        id: 0,
+        imageSrc: Home2048,
+      },
+       {
+        id: 1,
+        imageSrc: Gameplay2048,
+      },
+      {
+        id: 2,
+        imageSrc: Features2048,
+      },
+      {
+        id: 3,
+        imageSrc: Footer2048,
+      },
+      {
+        id: 4,
+        imageSrc: Rules2048,
+      },
+    ],
+  },
+  {
     company: "Layers.to",
     year: "2025",
     title: "Landing Page for Web Design platform",
@@ -109,6 +155,41 @@ const portfolioProjects = [
     ],
   },
   {
+    company: "Prescripto",
+    year: "2024",
+    title: "Frontend for Doctor Appointment Scheduling",
+    results: [
+      {
+        title:
+          "Developed a responsive React frontend for a healthcare platform, patients can schedule and manage appointments",
+      },
+      {
+        title:
+          "Implemented the design from Figma, made with Vite and React Router, and styled with Tailwind.",
+      },
+    ],
+    link: "https://prescripto-healthcare.vercel.app",
+    code: "https://github.com/tdogcodes/Prescripto-Healthcare",
+    images: [
+      {
+        id: 0,
+        imageSrc: Prescripto,
+      },
+      {
+        id: 1,
+        imageSrc: PrescriptoDocs,
+      },
+      {
+        id: 2,
+        imageSrc: PrescriptoAppt,
+      },
+      {
+        id: 3,
+        imageSrc: PrescriptoUserAppt,
+      },
+    ],
+  },
+  {
     company: "WebChat",
     year: "2024",
     title: "Realtime Chat App with React and Firebase",
@@ -131,34 +212,7 @@ const portfolioProjects = [
       },
       {
         id: 1,
-        imageSrc: WebChatUsers,
-      },
-      {
-        id: 2,
         imageSrc: WebChatChat,
-      },
-    ],
-  },
-  {
-    company: "Prescripto",
-    year: "2024",
-    title: "Frontend for Doctor Appointment Scheduling",
-    results: [
-      {
-        title:
-          "Developed a responsive React frontend for a healthcare platform, patients can schedule and manage appointments",
-      },
-      {
-        title:
-          "Implemented the design from Figma, made with Vite and React Router, and styled with Tailwind.",
-      },
-    ],
-    link: "https://prescripto-healthcare.vercel.app",
-    code: "https://github.com/tdogcodes/Prescripto-Healthcare",
-    images: [
-      {
-        id: 0,
-        imageSrc: Prescripto,
       },
     ],
   },
