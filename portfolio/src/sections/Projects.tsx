@@ -20,7 +20,7 @@ import Gameplay2048 from "@/assets/images/2048/2048Game.png";
 import Home2048 from "@/assets/images/2048/2048Home.png";
 import Features2048 from "@/assets/images/2048/2048Features.png";
 import Footer2048 from "@/assets/images/2048/2048Footer.png";
-import Rules2048 from "@/assets/images/2048/2048Rules.png";
+import Rules2048 from "@/assets/images/2048/2048Guide.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GithubIcon from "@/assets/icons/github.svg";
