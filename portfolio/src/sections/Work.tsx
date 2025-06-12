@@ -79,7 +79,7 @@ const WorkSection = () => {
                       className="flex gap-2 text-sm md:text-base text-white/50"
                     >
                       <CheckCircleIcon className=" lg:min-w-5 size-5 md:size-6" />
-                      <span className="">{result.title}</span>
+                      <span className="border-none">{result.title}</span>
                     </li>
                   ))}
                 </ul>
