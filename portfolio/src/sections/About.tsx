@@ -83,8 +83,8 @@ const hobbies = [
     emoji: "😎",
   },
   {
-    title: "Learning new tech",
-    emoji: "🤖",
+    title: "Counter strike",
+    emoji: "🔫",
   },
 ];
 
@@ -168,9 +168,9 @@ export const AboutSection = () => {
                 {hobbies.map((hobby) => (
                   <div
                     key={hobby.title}
-                    className="inline-flex mx-.5  hover:scale-95 transition-all duration-300 mx-1 px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5"
+                    className="inline-flex mx-1  hover:scale-95 transition-all duration-300  px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5"
                   >
-                    <span className="font-medium text-gray-950">
+                    <span className="font-medium mr-1 text-gray-950">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>

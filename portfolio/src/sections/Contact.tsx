@@ -41,7 +41,7 @@ export const ContactSection = () => {
                 <span className="font-semibold">
                   {copied ? "Copied! :D" : textToCopy}
                 </span>
-                <CopyPaste className="size-4" fill="white" />
+                <CopyPaste className="size-6" fill="white" />
               </div>
             </div>
             <a
@@ -53,8 +53,8 @@ export const ContactSection = () => {
                 className="pretty-btn flex items-center !p-4 sm:!px-6 h-10 sm:h-12 rounded-xl gap-2
              transition duration-500 border"
               >
-                <span className=" font-semibold">Open Gmail</span>
-                <ArrowUpRight className="size-4" />
+                <span className="font-semibold text-md">Open Gmail</span>
+                <ArrowUpRight className="size-6" />
               </button>
             </a>
           </div>

@@ -6,7 +6,6 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GungHoLogo from "@/assets/images/workExperience/GungHo_Horizontal_ColorW.png";
 import React from "react";
 import Image from "next/image";
-import Carousel from "@/components/Carousel";
 
 const WorkSection = () => {
   const workExperience = [
@@ -58,17 +57,17 @@ const WorkSection = () => {
                 <span>{job.year}</span>
               </div>
               <div className="flex gap-2 md:gap-4 items-center justify-center mt-2">
-                <h3 className="font-serif text-2xl mt-2 md:text-4xl">
+                <h3 className="font-serif text-3xl sm:text-2xl mt-2 md:text-4xl">
                   {job.title}
                 </h3>
-                <h3 className="font-serif text-2xl flex text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-sky-400 flex-nowrap md:text-4xl">
+                <h3 className="font-serif text-2xl  hidden sm:flex text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-sky-400 flex-nowrap md:text-4xl">
                   {"-"}
                 </h3>
                 <Image
                   alt="GungHo logo"
                   style={{ zIndex: 10, margin: "0px" }}
                   src={job.logo}
-                  className="w-[150px]  md:w-[200px]"
+                  className="w-[150px] hidden sm:block  md:w-[200px]"
                 />
               </div>
               <hr className="border-t-2 border-white/10 mt-4" />

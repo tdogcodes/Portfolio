@@ -21,6 +21,9 @@ import Home2048 from "@/assets/images/2048/2048Home.png";
 import Features2048 from "@/assets/images/2048/2048Features.png";
 import Footer2048 from "@/assets/images/2048/2048Footer.png";
 import Rules2048 from "@/assets/images/2048/2048Guide.png";
+import RefineDash from "@/assets/images/refine/refineDash.png";
+import RefineBus from "@/assets/images/refine/refineBus.png";
+import RefineBoard from "@/assets/images/refine/refineBoard.png";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import GithubIcon from "@/assets/icons/github.svg";
@@ -40,7 +43,7 @@ const portfolioProjects = [
     results: [
       {
         title:
-          "Create forms with drag and drop blocks, or use AI to create a form that you can share with a link, and track responses",
+          "Create forms with drag and drop blocks, or use AI to create a form that you can share with a link, and track responses.",
       },
       {
         title:
@@ -122,11 +125,11 @@ const portfolioProjects = [
     results: [
       {
         title:
-          "Built a Next.js landing page with TypeScript for Layers, a design platform to share work and mock-ups",
+          "Built a Next.js landing page with TypeScript for Layers, a design platform to share work and mock-ups.",
       },
       {
         title:
-          "User interactivity and web accessibility features, styled with Tailwind, CVA, & Framer Motion for animations",
+          "User interactivity and web accessibility features, styled with Tailwind, CVA, & Framer Motion for animations.",
       },
     ],
     link: "https://layers-design.vercel.app",
@@ -155,13 +158,44 @@ const portfolioProjects = [
     ],
   },
   {
+    company: "Refine Kanban",
+    year: "2025",
+    title: "Frontend for Project Management CRM",
+    results: [
+      {
+        title:
+          "Developed the frontend for a project management CRM with a kanban board, graphs, & pipelines to track deals.",
+      },
+      {
+        title:
+          "The site was made with Refine, Typescript, and styled with Ant Design, and uses mock data from a GraphQL endpoint.",
+      },
+    ],
+    link: "https://prescripto-healthcare.vercel.app",
+    code: "https://github.com/tdogcodes/Prescripto-Healthcare",
+    images: [
+      {
+        id: 0,
+        imageSrc: RefineBoard,
+      },
+      {
+        id: 1,
+        imageSrc: RefineDash,
+      },
+      {
+        id: 2,
+        imageSrc: RefineBus,
+      },
+    ],
+  },
+  {
     company: "Prescripto",
     year: "2024",
     title: "Frontend for Doctor Appointment Scheduling",
     results: [
       {
         title:
-          "Developed a responsive React frontend for a healthcare platform, patients can schedule and manage appointments",
+          "Developed a responsive React frontend for a healthcare platform, patients can schedule and manage appointments.",
       },
       {
         title:
@@ -200,7 +234,7 @@ const portfolioProjects = [
       },
       {
         title:
-          "Manages user data with Zustand and stores it in Firestore, uses Firebase Auth, and styled with Sass CSS",
+          "Manages user data with Zustand and stores it in Firestore, uses Firebase Auth, and styled with Sass CSS.",
       },
     ],
     link: "https://akasha-terminal.vercel.app",
@@ -271,7 +305,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1 }}
-      className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 flex flex-col align-center
+      className="z-0 overflow-hidden lg:w-[600px] after:z-10 mt-12 pb-10 sm:pb-0 flex flex-col align-center
 
 bg-gray-800 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2
 
