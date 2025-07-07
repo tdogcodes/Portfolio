@@ -176,11 +176,11 @@ const portfolioProjects = [
     images: [
       {
         id: 0,
-        imageSrc: RefineBoard,
+        imageSrc: RefineDash,
       },
       {
         id: 1,
-        imageSrc: RefineDash,
+        imageSrc: RefineBoard,
       },
       {
         id: 2,
