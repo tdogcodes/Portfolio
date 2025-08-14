@@ -14,10 +14,14 @@ import FormlyDash from "@/assets/images/formly/formlydash.jpg";
 import FormlyRes from "@/assets/images/formly/formlyres.jpg";
 import FormlySS from "@/assets/images/formly/formlyss.jpg";
 import FormStats from "@/assets/images/formly/formstats.jpg";
-import WebChatHome from "@/assets/images/webchat/webchatHome.png";
-import WebChatChat from "@/assets/images/webchat/webchatChat.png";
-import Gameplay2048 from "@/assets/images/2048/2048Game.png";
+import QSAI from "@/assets/images/quickscrape/quickscrapeai.png";
+import QSCred from "@/assets/images/quickscrape/quickscrapecred.png";
+import QSLand from "@/assets/images/quickscrape/quickscrapelanding.png";
+import QSRuns from "@/assets/images/quickscrape/quickscraperuns.png";
+import QSWorkflow from "@/assets/images/quickscrape/quickscrapeworkflow.png";
+import QSWorkflows from "@/assets/images/quickscrape/quickscrapeworkflows.png";
 import Home2048 from "@/assets/images/2048/2048Home.png";
+import Gameplay2048 from "@/assets/images/2048/2048Game.png";
 import Features2048 from "@/assets/images/2048/2048Features.png";
 import Footer2048 from "@/assets/images/2048/2048Footer.png";
 import Rules2048 from "@/assets/images/2048/2048Guide.png";
@@ -79,6 +83,34 @@ const portfolioProjects = [
       },
     ],
   },
+   {
+    company: "QuickScrape",
+    year: "2025",
+    title: "Web Automation Tool with Drag and Drop & AI",
+    results: [
+      {
+        title:
+          "Allows users to create custom workflows to scrape data from websites, automate browser tasks, and schedule cron jobs.",
+      },
+      {
+        title:
+          "Developed the frontend with ReactFlow & ShadCn, the backend uses Prisma, SQLite, Puppeteer, Stripe, and Gemini 2.0 Flash",
+      },
+    ],
+    link: "https://akasha-terminal.vercel.app",
+    code: "https://github.com/tdogcodes/Genshin-Impact-Messenging",
+    images: [
+      {
+        id: 0,
+        imageSrc: QSLand,
+      },
+      { id: 1, imageSrc: QSWorkflow },
+      { id: 2, imageSrc: QSAI },
+      { id: 3, imageSrc: QSRuns },
+      { id: 4, imageSrc: QSCred },
+      { id: 5, imageSrc: QSWorkflows },
+    ],
+  },
   {
     company: "2048 Tile Merging Game",
     year: "2025",
@@ -100,7 +132,7 @@ const portfolioProjects = [
         id: 0,
         imageSrc: Home2048,
       },
-       {
+      {
         id: 1,
         imageSrc: Gameplay2048,
       },
@@ -223,33 +255,6 @@ const portfolioProjects = [
       },
     ],
   },
-  {
-    company: "WebChat",
-    year: "2024",
-    title: "Realtime Chat App with React and Firebase",
-    results: [
-      {
-        title:
-          "Created a full-stack real-time chat app with React and Firebase, allowing users to log in, connect, and chat securely.",
-      },
-      {
-        title:
-          "Manages user data with Zustand and stores it in Firestore, uses Firebase Auth, and styled with Sass CSS.",
-      },
-    ],
-    link: "https://akasha-terminal.vercel.app",
-    code: "https://github.com/tdogcodes/Genshin-Impact-Messenging",
-    images: [
-      {
-        id: 0,
-        imageSrc: WebChatHome,
-      },
-      {
-        id: 1,
-        imageSrc: WebChatChat,
-      },
-    ],
-  },
 ];
 
 export const ProjectsSection = () => {
@@ -260,7 +265,7 @@ export const ProjectsSection = () => {
   const loadMoreInView = useInView(loadMoreRef, { once: true });
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev +2);
+    setVisibleCount((prev) => prev + 2);
   };
 
   return (

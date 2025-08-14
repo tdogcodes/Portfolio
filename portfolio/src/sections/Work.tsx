@@ -12,20 +12,20 @@ const WorkSection = () => {
     {
       company: "GungHo Online Entertainment",
       year: "2024",
-      title: "Web Developer",
+      title: "Fullstack Web Developer",
       logo: GungHoLogo,
       results: [
         {
           title:
-            "Built frontend with Vite, TypeScript, and CSS. Developed backend with Firebase for a blog content management system.",
+            "Collaborated in a remote Agile team to build & maintain a news platform & company website to share updates & announcements with their player community.",
         },
         {
           title:
-            "Collaborated in a remote Agile team, incorporating feedback from product managers, developers, and designers to improve the site.",
+            "Built reusable Next.js components & server actions to streamline development, and used Sass with Bootstrap to create a fully responsive, accessible design.",
         },
         {
           title:
-            "Implemented responsive design and optimized performance, improving page load speed and mobile usability.",
+            "Implemented Firebase Auth & Firestore for secure content management & integrated Google Analytics into an admin dashboard to monitor site traffic and user engagement.",
         },
       ],
     },
@@ -35,7 +35,7 @@ const WorkSection = () => {
     <section id="work" className="pb-16 lg:py-24 pt-16">
       <div className="flex flex-col sm:mx-10 md:mx-36 lg:mx-24">
         <SectionHeader title="Work Experience" eyebrow="" description="" />
-        <div className="flex flex-col lg:flex-row gap-5 lg:justify-center lg:flex-wrap overflow-hidden">
+        <div className="flex flex-col gap-5 lg:justify-center lg:flex-wrap overflow-hidden">
           {workExperience.map((job, i) => (
             <div
               key={i}
@@ -56,7 +56,7 @@ const WorkSection = () => {
                 <span>&bull;</span>
                 <span>{job.year}</span>
               </div>
-              <div className="flex gap-2 md:gap-4 items-center justify-center mt-2">
+              <div className="flex gap-2 md:gap-4 items-center justify-start mt-2">
                 <h3 className="font-serif text-3xl sm:text-2xl mt-2 md:text-4xl">
                   {job.title}
                 </h3>
@@ -71,7 +71,7 @@ const WorkSection = () => {
                 />
               </div>
               <hr className="border-t-2 border-white/10 mt-4" />
-                <ul className="flex m-auto py-4 lg:h-[50%] flex-col md:flex-row gap-4 mt-4 md:mt-5">
+                <ul className="flex m-auto py-4 lg:h-[50%] flex-col gap-4 mt-4 md:mt-5">
                   {job.results.map((result) => (
                     <li
                       key={result.title}
