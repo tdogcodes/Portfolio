@@ -16,7 +16,7 @@ import FormlySS from "@/assets/images/formly/formlyss.jpg";
 import FormStats from "@/assets/images/formly/formstats.jpg";
 import QSAI from "@/assets/images/quickscrape/quickscrapeai.png";
 import QSCred from "@/assets/images/quickscrape/quickscrapecred.png";
-import QSLand from "../assets/images/quickscrape/quickscrapelanding.png";
+import QSLand from "@/assets/images/quickscrape/quickscrapeland.png";
 import QSRuns from "@/assets/images/quickscrape/quickscraperuns.png";
 import QSWorkflow from "@/assets/images/quickscrape/quickscrapeworkflow.png";
 import QSWorkflows from "@/assets/images/quickscrape/quickscrapeworkflows.png";
