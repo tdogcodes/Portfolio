@@ -256,7 +256,7 @@ const portfolioProjects = [
     ],
   },
 ];
-
+//projects are used to display the projects in the portfolio
 export const ProjectsSection = () => {
   const [visibleCount, setVisibleCount] = useState(4);
 
