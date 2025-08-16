@@ -97,8 +97,8 @@ const portfolioProjects = [
           "Developed the frontend with ReactFlow & ShadCn, the backend uses Prisma, SQLite, Puppeteer, Stripe, and Gemini 2.0 Flash",
       },
     ],
-    link: "https://akasha-terminal.vercel.app",
-    code: "https://github.com/tdogcodes/Genshin-Impact-Messenging",
+    link: "https://quickscrape.vercel.app",
+    code: "https://github.com/tdogcodes/Next-SQLite-Web-Scraping",
     images: [
       {
         id: 0,
