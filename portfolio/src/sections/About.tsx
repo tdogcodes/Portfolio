@@ -3,17 +3,13 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import wguLogo from "@/assets/images/wguLogo.png";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/javascript.svg";
-import HtmlIcon from "@/assets/icons/html5.svg";
 import TailwindIcon from "@/assets/icons/tailwind.svg";
-import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import GitIcon from "@/assets/icons/git.svg";
 import TypescriptIcon from "@/assets/icons/typescript.svg";
 import NextjsIcon from "@/assets/icons/next.svg";
-import Zustand from "@/assets/icons/zustand.svg";
-import FramerMotion from "@/assets/icons/framerMotion.svg";
 import Postgres from "@/assets/icons/postgresql.svg";
+import Prisma from "@/assets/icons/prisma.svg";
+import Tanstack from "@/assets/icons/tanstack.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import me from "@/assets/images/me.webp";
@@ -24,40 +20,28 @@ import Keycap from "@/components/keycap/Keycap";
 
 const toolboxItems = [
   {
-    title: "Javascript",
-    iconType: JavascriptIcon,
-  },
-  {
     title: "Typescript",
     iconType: TypescriptIcon,
-  },
-  {
-    title: "HTML",
-    iconType: HtmlIcon,
-  },
-  {
-    title: "CSS",
-    iconType: CssIcon,
-  },
-  {
-    title: "Git",
-    iconType: GitIcon,
   },
   {
     title: "React",
     iconType: ReactIcon,
   },
   {
-    title: "Next.js",
-    iconType: NextjsIcon,
-  },
-  {
     title: "Tailwind",
     iconType: TailwindIcon,
   },
   {
-    title: "Zustand",
-    iconType: Zustand,
+    title: "TanStack",
+    iconType: Tanstack,
+  },
+  {
+    title: "Next.js",
+    iconType: NextjsIcon,
+  },
+  {
+    title: "Prisma",
+    iconType: Prisma,
   },
   {
     title: "PostgreSQL",
@@ -91,12 +75,10 @@ const hobbies = [
 export const AboutSection = () => {
   const ref0 = useRef(null);
   const ref1 = useRef(null);
-  const ref2 = useRef(null);
   const ref3 = useRef(null);
 
   const isInView0 = useInView(ref0, { once: true });
   const isInView1 = useInView(ref1, { once: true });
-  const isInView2 = useInView(ref2, { once: true });
   const isInView3 = useInView(ref3, { once: true });
 
   return (
@@ -135,8 +117,8 @@ export const AboutSection = () => {
             >
               <Card>
                 <CardHeader
-                  title="My Toolbox"
-                  description="The tools I use to build web applications"
+                  title="My Favorite Tools"
+                  description="Technologies I use regularly"
                 />
                 <div className="mt-5 flex flex-col items-center justify-center">
                   <div className="flex flex-wrap justify-center gap-2">
@@ -153,32 +135,6 @@ export const AboutSection = () => {
               </Card>
             </motion.div>
           </div>
-          <motion.div
-            ref={ref2}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView2 ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1 }}
-          >
-            <Card className="gap-4">
-              <CardHeader
-                title="My Hobbies"
-                description="Things I like besides web development"
-              />
-              <div className="w-auto mx-auto">
-                {hobbies.map((hobby) => (
-                  <div
-                    key={hobby.title}
-                    className="inline-flex mx-1  hover:scale-95 transition-all duration-300  px-6 bg-gradient-to-r m-0.5 from-emerald-300 to-sky-400 rounded-full py-1.5"
-                  >
-                    <span className="font-medium mr-1 text-gray-950">
-                      {hobby.title}
-                    </span>
-                    <span>{hobby.emoji}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          </motion.div>
           <motion.div
             ref={ref3}
             initial={{ opacity: 0, y: 50 }}

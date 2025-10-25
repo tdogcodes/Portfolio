@@ -56,7 +56,7 @@ const WorkSection = () => {
                 <span>&bull;</span>
                 <span>{job.year}</span>
               </div>
-              <div className="flex gap-2 md:gap-4 items-center justify-start mt-2">
+              <div className="flex gap-2 md:gap-4 items-center justify-center mt-2">
                 <h3 className="font-serif text-3xl sm:text-2xl mt-2 md:text-4xl">
                   {job.title}
                 </h3>
