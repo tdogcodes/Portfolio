@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { motion, AnimatePresence, PanInfo } from "framer-motion"
 import { wrap } from "@popmotion/popcorn"
+import { StaticImageData } from "next/image"
 
 const sliderVariants = {
   incoming: (direction: number) => ({
@@ -18,7 +19,7 @@ const sliderVariants = {
 
 type Image = {
   id: number
-  imageSrc: string
+  imageSrc: StaticImageData | string
 }
 
 type Props = {
@@ -67,7 +68,7 @@ const Carousel = ( { images }: Props ) => {
             <motion.div
               key={imageCount}
               style={{
-                backgroundImage: `url(${images[activeImageIndex].imageSrc})`
+                backgroundImage: `url(${typeof images[activeImageIndex].imageSrc === 'string' ? images[activeImageIndex].imageSrc : images[activeImageIndex].imageSrc.src})`
               }}
               custom={direction}
               variants={sliderVariants}

@@ -145,7 +145,8 @@ export const AboutSection = () => {
               <Image
                 src={mapImage}
                 alt="Map"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center size-24 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400">
                 <Image
