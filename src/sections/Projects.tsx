@@ -14,6 +14,7 @@ import FormlyDash from "@/assets/images/formly/formlydash.jpg";
 import FormlyRes from "@/assets/images/formly/formlyres.jpg";
 import FormlySS from "@/assets/images/formly/formlyss.jpg";
 import FormStats from "@/assets/images/formly/formstats.jpg";
+import StratcallerInGame from "@/assets/images/stratcaller/stratcallerInGame.png";
 import QSAI from "@/assets/images/quickscrape/quickscrapeai.png";
 import QSCred from "@/assets/images/quickscrape/quickscrapecred.png";
 import QSLand from "@/assets/images/quickscrape/quickscrapeland.png";
@@ -217,6 +218,29 @@ const portfolioProjects = [
       {
         id: 2,
         imageSrc: RefineBus,
+      },
+    ],
+  },
+    {
+    company: "Stratcaller",
+    year: "2025",
+    title: "Realtime Strategic Advice and Statistics For CS2",
+    results: [
+      {
+        title:
+          "Developed a Electron app that gives players advice during matches based on their game state.",
+      },
+      {
+        title:
+          "Implemented features such as a round impact chart, economic advice, and tactical recommendations based on the current weapon and kd.",
+      },
+    ],
+    link: "https://prescripto-healthcare.vercel.app",
+    code: "https://github.com/tdogcodes/Prescripto-Healthcare",
+    images: [
+      {
+        id: 0,
+        imageSrc: StratcallerInGame,
       },
     ],
   },
